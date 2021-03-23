@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Dmitry Pulsha](https://up.htmlacademy.ru/adaptive/22/user/1599147).
-* Наставник: `Неизвестно`.
+* Наставник: [Татьяна Симоненко](https://up.htmlacademy.ru/adaptive/22/user/6613).
 
 ---
 
