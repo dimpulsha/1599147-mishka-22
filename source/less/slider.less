@@ -1,0 +1,29 @@
+//
+.slider__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.slide__button-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 38px;
+}
+
+.slider__button {
+  height: 52px; //меняется
+  background-color: transparent;
+  border: 1px solid @decor-border-color;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

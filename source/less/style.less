@@ -1,1 +1,37 @@
 // Начните писать стили здесь
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/opensans.woff") format("woff2"), url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+}
+
+@import "global-var.less"; //глобальные переменные
+@import "global.less";
+@import "page-body.less"; //настройки страницы
+@import "page-header.less";
+@import "page-nav.less";
+@import "site-nav.less";
+@import "user-nav.less";
+@import "page-content.less";
+@import "./index/start.less";
+@import "section-title.less";
+@import "product-list.less";
+@import "./index/promo.less";
+@import "product-desc.less";
+@import "button.less";
+@import "./index/advantages.less";
+@import "review.less";
+@import "slider.less";
+@import "./index/contact.less";
+@import "page-footer.less";
+@import "social-list.less";
+@import "copyright.less";
