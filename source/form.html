@@ -62,7 +62,7 @@
       </div>
     </div>
     <section class="page-content__page-form page-form">
-      <h2 class="visually-hiden">Форма заказа</h2>
+      <h2 class="visually-hidden">Форма заказа</h2>
       <div class="page-form__wrapper">
         <p class="page-form__text text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму
           заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
@@ -151,7 +151,7 @@
               <legend class="order-form__legend form-legend">Тел</legend>
               <div class="form-text-input">
                 <label class="visually-hidden" for="phone-id">Введите номер телефона</label>
-                <input class="text-input order-form__text-input tel-input" type="tel" name="phone" id="phone-id"
+                <input class="text-input order-form__text-input text-input--tel-input" type="tel" name="phone" id="phone-id"
                   placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
               </div>
             </fieldset>
@@ -159,7 +159,7 @@
               <legend class="order-form__legend form-legend">E-mail</legend>
               <div class="form-text-input">
                 <label class="visually-hidden" for="email-id">Введите адрес электронной почты</label>
-                <input class="text-input order-form__text-input email-input" type="email" name="email" id="email-id"
+                <input class="text-input order-form__text-input text-input--email-input" type="email" name="email" id="email-id"
                   placeholder="Ваш Email*" required>
               </div>
             </fieldset>
@@ -168,7 +168,7 @@
         <div class="order-form__wrapper">
           <fieldset class="order-form__fieldset form-fieldset">
             <legend class="order-form__legend form-legend">Доп</legend>
-            <div class="form-text-input">
+            <div class="form-textarea-input">
               <label class="visually-hidden" for="text-id">Дополнительная информация</label>
               <textarea class="textarea-input order-form__text-input" name="text" id="text-id" cols="25"
                 rows="6"></textarea>
