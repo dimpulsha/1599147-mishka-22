@@ -12,7 +12,7 @@
 <body class="page-body">
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html" >
         <!-- img изменится при верстке адаптива -->
         <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" width="86"
           height="35">
@@ -60,14 +60,15 @@
         <h1 class="section-title section-title--main">Каталог товаров</h1>
       </div>
     </div>
-    <section class="catalog">
+    <section class="page-content_catalog catalog">
       <div class="catalog__wrapper">
         <h2 class="visually-hidden">Товары каталога</h2>
         <ul class="catalog__production-list production-list">
           <li class="production-list__item production-item">
             <a class="production-item__card-link" href="#">
               <picture class="production-item__img">
-                <img src="img/pr-mobile-1.jpg" alt="Зайчик-попрыгайчик. Цвет: голубой" width="260" height="195">
+                <img class="production-item__img-body" src="img/pr-mobile-1.jpg" alt="Зайчик-попрыгайчик. Цвет: голубой"
+                  width="260" height="195">
               </picture>
             </a>
             <div class="production-item__content-wrapper">
@@ -90,7 +91,8 @@
           <li class="production-list__item production-item">
             <a class="production-item__card-link" href="#">
               <picture class="production-item__img">
-                <img src="img/pr-mobile-2.jpg" alt="Корзинка для белья. Цвет: розовый/белый" width="260" height="195">
+                <img class="production-item__img-body" class="production-item__img-body" src="img/pr-mobile-2.jpg"
+                  alt="Корзинка для белья. Цвет: розовый/белый" width="260" height="195">
               </picture>
             </a>
             <div class="production-item__content-wrapper">
@@ -114,7 +116,7 @@
           <li class="production-list__item production-item">
             <a class="production-item__card-link" href="#">
               <picture class="production-item__img">
-                <img src="img/pr-mobile-3.jpg" alt="Большая корзинка для игрушек. Вместительная и удобная" width="260"
+                <img class="production-item__img-body" src="img/pr-mobile-3.jpg" alt="Большая корзинка для игрушек. Вместительная и удобная" width="260"
                   height="195">
               </picture>
             </a>
@@ -138,13 +140,15 @@
         </ul>
       </div>
     </section>
-    <section class="production-promo">
+    <section class="page-content__production-promo production-promo">
       <div class="production-promo__wrapper">
         <h2 class="visually-hidden">О нашей продукции</h2>
-        <h3 class="production-promo__title section-title section-title--h3">Процесс производства</h3>
-        <p class="production-promo__text text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о
-          том,
-          как появляются наши товары.</p>
+        <div class="production-promo__content-wrapper">
+          <h3 class="production-promo__title section-title section-title--h3">Процесс производства</h3>
+          <p class="production-promo__text text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о
+            том, как появляются наши товары.</p>
+          <a class="production-promo__order-button button" href="form.html">Сделать заказ</a>
+        </div>
         <div class="production-promo__video site-video">
           <video class="site-video__object" poster="img/video-mobile.jpg" width="260" height="150">
             <source src="#" type="video/mp4">
@@ -153,7 +157,6 @@
             <img src="img/play.svg" alt="" width="101" height="77">
           </button>
         </div>
-        <a class="production-promo__order-button button" href="#">Сделать заказ</a>
       </div>
     </section>
   </main>
