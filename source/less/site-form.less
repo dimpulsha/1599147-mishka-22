@@ -38,7 +38,7 @@
   align-self: center;
 }
 
-.site-form__box-marker {
+/* .site-form__box-marker {
   align-self: center;
 }
 
@@ -48,7 +48,7 @@
   height: 41px;
   border-radius: 50%;
   border: 2px solid @checkbox-color;
-}
+} */
 
 /* .site-form__box-marker--checkbox {
   box-sizing: border-box;
@@ -57,6 +57,27 @@
   border: 2px solid @checkbox-color;
 }
  */
+//test vertical-align
+.site-form__label--box-item-t {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 41px;
+  padding-left: 61px;
+  vertical-align: middle;
+  outline: 1px solid green;
+}
+
+.site-form__label--box-item-t::before {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  border: 2px solid @checkbox-color;
+}
+
+
 // Вариант 2 - чекбоксы
 .site-form__label--box {
   display: grid;
