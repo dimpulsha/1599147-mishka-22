@@ -4,19 +4,21 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
-  <header class="page-header">
+  <header class="page-body__header page-header">
+    <a class="page-header__logo">
+      <!-- img изменится при верстке адаптива -->
+      <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" width="86"
+        height="35">
+    </a>
     <div class="page-header__wrapper">
-      <a class="page-header__logo">
-        <!-- img изменится при верстке адаптива -->
-        <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" width="86"
-          height="35">
-      </a>
       <nav class="page-nav page-header__nav">
-        <button class="page-nav__expand-button" type="button"><span class="visually-hidden">Показать меню</span>
+        <button class="page-nav__button" type="button"><span class="visually-hidden">Показать меню</span>
           <!-- пока так. при верстке графики изменить -->
           <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 0H0V2H20V0Z" fill="#231F20" />
@@ -24,14 +26,13 @@
             <path d="M20 12H0V14H20V12Z" fill="#231F20" />
           </svg>
         </button>
-        <ul class="page-nav__site-list site-nav">
+        <ul class="page-nav__site-list page-nav__site-list--open site-nav">
           <li class="site-nav__item">
             <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="form.html">Вязание на заказ</a>
           </li>
-          <!--  в десктопной версии есть новые пункты меню -->
           <li class="site-nav__item site-nav__item--extended-item">
             <a class="site-nav__link" href="#">Новые поступления</a>
           </li>
@@ -39,12 +40,12 @@
             <a class="site-nav__link" href="#">Распродажа</a>
           </li>
         </ul>
-        <ul class="page-nav__user-list user-nav">
+        <ul class="page-nav__user-list page-nav__user-list--open user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__link" href="#"><span class="user-nav__link-text">Поиск по сайту</span></a>
+            <a class="user-nav__link  user-nav__link--search" href="#"><span class="user-nav__link-text">Поиск по сайту</span></a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link" href="#"><span class="user-nav__link-text">Корзина: <span>пока
+            <a class="user-nav__link user-nav__link--chart" href="#"><span class="user-nav__link-text">Корзина: <span>пока
                   пуста</span></span></a>
           </li>
         </ul>
@@ -52,24 +53,19 @@
       </nav>
     </div>
   </header>
-  <main class="page-content">
+  <main class="page-body__content page-content">
     <section class="start">
       <div class="start__wrapper">
         <h1 class="visually-hidden">Магазин товаров ручной работы "Мишка"</h1>
-        <!-- Внимание!  section-title--centered - тема препроцессоров и примесей -->
-        <!-- но пока не понятно как в одном конкретном section-title изменить центровку.
-        БЭМ говорит что это делается модификатором. возможно более правильно start__title--centered
-      section-title--centered не понадобился. центровку перенес в start__title -->
         <p class="start__title section-title section-title--main">Милые штуки ручной <br>работы для дома</p>
       </div>
-      <!--  в планшете и десктопе на ul навесить ограничения wraqpper -->
       <div class="start__products-wrapper">
         <ul class="start__products product-list">
           <li class="product-list__item product-list__item--interior">
-            <a class="product-list__link" href="#">Предметы интерьера</a>
+            <a class="product-list__link" href="#1">Предметы <br> интерьера</a>
           </li>
           <li class="product-list__item product-list__item--toys">
-            <a class="product-list__link" href="#">Детские игрушки</a>
+            <a class="product-list__link" href="#2">Детские <br> игрушки</a>
           </li>
         </ul>
       </div>
@@ -108,33 +104,30 @@
         <h2 class="advantages__title section-title">Коротко о нас</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
-          <li class="advantages__item advantages__item--price">Скандинавский стиль по российской цене</li>
-          <li class="advantages__item advantages__item--like">Увеличивает лайкина фотографиях</li>
           <li class="advantages__item advantages__item--handmade">Связано вручную <br>
             с любовью и умилением</li>
+          <li class="advantages__item advantages__item--price">Скандинавский стиль по российской цене</li>
           <li class="advantages__item advantages__item--economy">Поддержка отечественного производителя</li>
+          <li class="advantages__item advantages__item--like">Увеличивает лайки на фотографиях</li>
           <li class="advantages__item advantages__item--present">Поставляется <br>
             в подарочной упаковке</li>
         </ul>
       </div>
     </section>
-    <section class=".page-content__review review">
+    <section class="page-content__review review">
       <div class="review__wrapper">
         <h2 class="review__title section-title">Отзывы</h2>
-        <div class="slider">
-          <!--  про слайдер идея следующая: Содержимое отдельно, а поведение слайдера - отдельно.
-        Таким образом мы можем менять внутреннюю структуру и содержимое li (сегодня это blockquote, завтра что-то другое)
-        не затрагивая то, что относится к слайдеру. + Изменил имена слайдеровских кнопок-->
+        <div class="review__slider slider">
           <ul class="review__list slider__list">
             <li class="review__item slider__item slider__item--current">
               <blockquote class="review__body">
                 <p class="review__text text">Я молодая мама, но всё равно фотографии не набирали и близко такого
                   количества лайков, как у популярных инстамамочек. <br> В отчаянии, я накупила аксессуаров и игрушек в
                   Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-                <div class="review__author-wrapper">
+                <!-- <div class="review__author-wrapper"> -->
                   <cite class="review__author">Анастасия Красильникова</cite>
                   <address class="review__author-contact">@misssssiskras</address>
-                </div>
+              <!--    </div> -->
               </blockquote>
             </li>
             <li class="review__item slider__item">
@@ -143,10 +136,10 @@
                   количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
                   и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
                   больше лайков!</p>
-                <div class="review__author-wrapper">
+                <!-- <div class="review__author-wrapper"> -->
                   <cite class="review__author">Екатерина Красильникова</cite>
                   <address class="review__author-contact">misssssiskras2</address>
-                </div>
+            <!--      </div> -->
               </blockquote>
             </li>
             <li class="review__item slider__item">
@@ -155,21 +148,21 @@
                   такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек
                   в Мишке, и мои фотографии
                   сразу стали более стильными, а также набирают больше лайков!</p>
-                <div class="review__author-wrapper">
+                <!--  <div class="review__author-wrapper"> -->
                   <cite class="review__author">Елена Красильникова</cite>
                   <address class="review__author-contact">@misssssiskras3</address>
-                </div>
+              <!--   </div> -->
               </blockquote>
             </li>
           </ul>
-          <div class="slide__button-wrapper">
-            <button class="slider__button slider__button--back" type="button">
+          <div class="slider__control-wrapper">
+            <button class="slider__control slider__button--back" type="button">
               <span class="visually-hidden">Назад</span>
               <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" fill="black" />
               </svg>
             </button>
-            <button class="slider__button slider__button--forward" type="button">
+            <button class="slider__control slider__button--forward" type="button">
               <span class="visually-hidden">Вперед</span>
               <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black" />
@@ -182,7 +175,7 @@
     </section>
     <section class="page-content__contact contact">
       <div class="contact__wrapper">
-        <h2 class="contact__title section-title"> Контакты</h2>
+        <h2 class="contact__title section-title">Контакты</h2>
         <ul class="contact__list">
           <li class="contact__item">
             <span class="contact__kind">e-mail:</span> <a class="contact__value contact__value--mail"
@@ -196,14 +189,12 @@
         </ul>
       </div>
       <!--  пока просто картинка -->
-      <picture>
+      <picture class="contact__map">
         <img src="img/map-mobile@1x.png"
           alt="Карта с местом нахождения компании: г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 10"
           width="320" height="455">
       </picture>
-      <div class="contact__wrapper">
         <button class="button contact__write-button">Напишите нам</button>
-      </div>
     </section>
   </main>
   <footer class="page-footer">

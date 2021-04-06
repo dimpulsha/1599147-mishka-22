@@ -9,4 +9,44 @@
   font-size: 17px;
   line-height: 30px;
   color: @text-color;
+
+  //раскладка
+  @media (max-width: @tablet-width) {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-rows: 89px 70px 1fr auto;
+    min-height: 100vh;
+  }
+}
+
+.page-body__header {
+  @media (min-width: @tablet-width) {
+    grid-column: 1/ -1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    min-width: 668px;
+    width: 86%;
+    height: 143px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+}
+
+.page-body__content {
+  @media (min-width: @tablet-width) {
+    grid-column: 1/ -1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
 }

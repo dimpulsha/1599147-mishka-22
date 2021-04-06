@@ -2,14 +2,39 @@
 .page-footer {
   background-color: @footer-bg-color;
 }
-// это всё только под мобилу
+
+.page-footer__wrapper {
+  @media (min-width: @tablet-width) {
+    min-width: 668px;
+    width: 86%;
+    height: 143px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+}
+
 .page-footer__content {
   display: grid;
   grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .page-footer__logo {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .page-footer__social-list {

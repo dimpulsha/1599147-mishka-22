@@ -6,18 +6,68 @@
 }
 */
 .start {
-  // а может просто разложить блок гридом? и не мучаться с bg?
+  //мобильная раскладка
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 489px;
   background-image: url("../../img/hero-mobile.jpg");
   background-position: top center;
   background-repeat: no-repeat;
+  /* background-size: contain; */
+
+  @media (min-width: @tablet-width) {
+    height: 746px;
+    background-image: url("../../img/hero-desktop.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+  }
 }
 
 .start__wrapper {
   min-width: 260px;
   padding: 0 30px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    min-width: 668px;
+    width: 86%;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
 }
 
 .start__title {
   text-align: center;
+  padding-top: 73px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 158px;
+  }
+}
+
+.start__products-wrapper {
+  @media (min-width: @tablet-width) {
+    min-width: 668px;
+    width: 86%;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
 }
