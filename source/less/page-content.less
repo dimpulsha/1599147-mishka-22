@@ -2,6 +2,16 @@
 .page-content__promo {
   margin-top: 31px;
   padding-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 51px;
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 71px;
+    padding-bottom: 73px;
+  }
 }
 
 .page-content__advantages {
@@ -15,6 +25,13 @@
 
 .page-content__contact {
   margin-top: 38px;
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto;
+    margin-bottom: 105px;
+  }
 }
 
 // страница формы

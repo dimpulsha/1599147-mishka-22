@@ -1,6 +1,32 @@
 //
+.page-header {
+  position: relative;
+  //мобильная раскладка
+  display: grid;
+  grid-template-rows: 79px;
+}
+
+.page-header__logo {
+  @media (max-width: @mobile-only-width) {
+    justify-self: center;
+    align-self: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+  }
+}
+
 .page-header__wrapper {
-  min-width: 260px;
-  padding: 0 30px;
-  margin: 0 auto;
+  @media (min-width: @tablet-width) {
+    min-width: 668px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
 }
