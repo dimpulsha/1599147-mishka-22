@@ -3,10 +3,32 @@
   min-width: 260px;
   padding: 0 30px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    min-width: 668px;
+    width: 87%;
+    padding: 0 50px;
+    margin: 0 auto 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto 31px;
+  }
 }
 
 .order-section__text {
-  margin: 0;
+  margin: 0 auto 13px;
   font-size: 13px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+  }
 }
