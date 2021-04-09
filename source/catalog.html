@@ -11,14 +11,14 @@
 
 <body class="page-body">
   <header class="page-header">
+    <a href="index.html" class="page-header__logo">
+      <!-- img изменится при верстке адаптива -->
+      <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" width="86"
+        height="35">
+    </a>
     <div class="page-header__wrapper">
-      <a class="page-header__logo" href="index.html" >
-        <!-- img изменится при верстке адаптива -->
-        <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" width="86"
-          height="35">
-      </a>
       <nav class="page-nav page-header__nav">
-        <button class="page-nav__expand-button" type="button"><span class="visually-hidden">Показать меню</span>
+        <button class="page-nav__button" type="button"><span class="visually-hidden">Показать меню</span>
           <!-- пока так. при верстке графики изменить -->
           <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 0H0V2H20V0Z" fill="#231F20" />
@@ -26,14 +26,13 @@
             <path d="M20 12H0V14H20V12Z" fill="#231F20" />
           </svg>
         </button>
-        <ul class="page-nav__site-list site-nav">
+        <ul class="page-nav__site-list page-nav__site-list--open site-nav">
           <li class="site-nav__item">
             <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="form.html">Вязание на заказ</a>
           </li>
-          <!--  в десктопной версии есть новые пункты меню -->
           <li class="site-nav__item site-nav__item--extended-item">
             <a class="site-nav__link" href="#">Новые поступления</a>
           </li>
@@ -41,12 +40,14 @@
             <a class="site-nav__link" href="#">Распродажа</a>
           </li>
         </ul>
-        <ul class="page-nav__user-list user-nav">
+        <ul class="page-nav__user-list page-nav__user-list--open user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__link" href="#"><span class="user-nav__link-text">Поиск по сайту</span></a>
+            <a class="user-nav__link  user-nav__link--search" href="#"><span class="user-nav__link-text">Поиск по
+                сайту</span></a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link" href="#"><span class="user-nav__link-text">Корзина: <span>пока
+            <a class="user-nav__link user-nav__link--chart" href="#"><span class="user-nav__link-text">Корзина:
+                <span>пока
                   пуста</span></span></a>
           </li>
         </ul>
@@ -54,10 +55,10 @@
       </nav>
     </div>
   </header>
-  <main class="page-content">
-    <div class="page-content__title content-title">
-      <div class="content-title__wrapper">
-        <h1 class="section-title section-title--main">Каталог товаров</h1>
+  <main class="page-body__content page-content">
+    <div class="page-content__title content-header">
+      <div class="content-header__wrapper">
+        <h1 class="content-header__title section-title section-title--main">Каталог товаров</h1>
       </div>
     </div>
     <section class="page-content__catalog catalog">
@@ -65,7 +66,7 @@
         <h2 class="visually-hidden">Товары каталога</h2>
         <ul class="catalog__production-list production-list">
           <li class="production-list__item production-item">
-            <a class="production-item__card-link" href="#">
+            <a class="production-item__card-link production-item__img-wrapper" href="#">
               <picture class="production-item__img">
                 <img class="production-item__img-body" src="img/pr-mobile-1.jpg" alt="Зайчик-попрыгайчик. Цвет: голубой"
                   width="260" height="195">
@@ -89,7 +90,7 @@
             </div>
           </li>
           <li class="production-list__item production-item">
-            <a class="production-item__card-link" href="#">
+            <a class="production-item__card-link production-item__img-wrapper" href="#">
               <picture class="production-item__img">
                 <img class="production-item__img-body" src="img/pr-mobile-2.jpg"
                   alt="Корзинка для белья. Цвет: розовый/белый" width="260" height="195">
@@ -114,10 +115,10 @@
             </div>
           </li>
           <li class="production-list__item production-item">
-            <a class="production-item__card-link" href="#">
+            <a class="production-item__card-link production-item__img-wrapper" href="#">
               <picture class="production-item__img">
-                <img class="production-item__img-body" src="img/pr-mobile-3.jpg" alt="Большая корзинка для игрушек. Вместительная и удобная" width="260"
-                  height="195">
+                <img class="production-item__img-body" src="img/pr-mobile-3.jpg"
+                  alt="Большая корзинка для игрушек. Вместительная и удобная" width="260" height="195">
               </picture>
             </a>
             <div class="production-item__content-wrapper">
@@ -143,12 +144,11 @@
     <section class="page-content__production-promo production-promo">
       <div class="production-promo__wrapper">
         <h2 class="visually-hidden">О нашей продукции</h2>
-        <div class="production-promo__content-wrapper">
-          <h3 class="production-promo__title section-title section-title--h3">Процесс производства</h3>
-          <p class="production-promo__text text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о
-            том, как появляются наши товары.</p>
-          <a class="production-promo__order-button button" href="form.html">Сделать заказ</a>
-        </div>
+        <!-- <div class="production-promo__content-wrapper"> -->
+        <h3 class="production-promo__title section-title section-title--h3">Процесс производства</h3>
+        <p class="production-promo__text text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о
+          том, как появляются наши товары.</p>
+        <!--  </div> -->
         <div class="production-promo__video site-video">
           <video class="site-video__object" poster="img/video-mobile.jpg" width="260" height="150">
             <source src="#" type="video/mp4">
@@ -157,6 +157,8 @@
             <img src="img/play.svg" alt="" width="101" height="77">
           </button>
         </div>
+        <a class="production-promo__order-button button" href="form.html">Сделать заказ</a>
+        <div class="production-promo__decor"></div>
       </div>
     </section>
   </main>

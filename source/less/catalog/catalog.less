@@ -1,6 +1,31 @@
 //
+.catalog {
+  padding-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 128px;
+  }
+}
+
 .catalog__wrapper {
   min-width: 260px;
   padding: 0 30px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    min-width: 668px;
+    width: 86%;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
 }
