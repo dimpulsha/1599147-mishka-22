@@ -1,9 +1,15 @@
 //
 .page-header {
   position: relative;
-  //мобильная раскладка
-  display: grid;
-  grid-template-rows: 79px;
+
+  @media (max-width: @mobile-only-width) {
+    //мобильная раскладка
+    display: grid;
+    grid-template-rows: 79px;
+  }
+  /* @media (min-width: @tablet-width) {
+    grid-template-rows: 88px;
+  } */
 }
 
 .page-header__logo {
@@ -17,16 +23,18 @@
   }
 }
 
-.page-header__wrapper {
+/* .page-header__wrapper {
   @media (min-width: @tablet-width) {
     min-width: 668px;
+    width: 86%;
     padding: 0 50px;
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 1050px;
+    width: 1050px;
     padding: 0 50px;
     margin: 0 auto;
   }
 }
+ */

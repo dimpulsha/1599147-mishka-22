@@ -3,15 +3,24 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
-  color: @menu-text-color;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
+    flex-wrap: wrap;
+  }
 }
 
 .user-nav__item {
   box-sizing: border-box;
-
   //мобильный декор
   @media (max-width: @mobile-only-width) {
     box-shadow: 0 1px 0 @menu-border, inset 0 1px 0 @menu-border;
@@ -19,17 +28,90 @@
   }
 }
 
+.user-nav__item--search {
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    border-left: 1px solid fade(@dark-basic, 10);
+    border-right: 1px solid fade(@dark-basic, 10);
+  }
+}
+
 .user-nav__link {
+  position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  /* vertical-align: middle; */
-  color: inherit;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: @menu-text-color;
   text-decoration: none;
 
   @media (max-width: @mobile-only-width) {
-    padding-left: 76px;
-    padding-right: 30px;
+    padding: 28px 30px 27px 76px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 33px 0 31px 76px;
+  }
+
+  &:hover {
+    color: fade(@menu-text-color, 60%);
+  }
+
+  &:focus {
+    color: fade(@menu-text-color, 60%);
+  }
+
+  &:active {
+    color: fade(@menu-text-color, 30%);
+  }
+}
+
+.user-nav__link:hover path {
+  fill: @menu-icon-active;
+  opacity: 1;
+}
+
+.user-nav__link:focus path {
+  fill: @menu-icon-active;
+  opacity: 1;
+}
+
+.user-nav__link:active path {
+  fill: @menu-icon-active;
+  opacity: 0.3;
+}
+
+.user-nav__link-icon--search {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 32px;
+  left: 32px;
+
+  @media (min-width: @tablet-width) {
+    top: 36px;
+    left: 33px;
+  }
+}
+
+.user-nav__link--search-text {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.user-nav__link-icon--cart {
+  position: absolute;
+  width: 20px;
+  height: 19px;
+  top: 31px;
+  left: 30px;
+
+  @media (min-width: @tablet-width) {
+    top: 35px;
+    left: 31px;
   }
 }
