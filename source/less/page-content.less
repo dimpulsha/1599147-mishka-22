@@ -16,11 +16,25 @@
 
 .page-content__advantages {
   margin-top: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 30px;
+  }
 }
 
 .page-content__review {
   margin-top: 58px;
   padding-bottom: 45px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 83px;
+    padding-bottom: 85px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 90px;
+    padding-bottom: 67px;
+  }
 }
 
 .page-content__contact {
@@ -30,7 +44,12 @@
     width: 1050px;
     padding: 0 50px;
     margin: 0 auto;
-    margin-bottom: 105px;
+    margin-top: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 71px;
+    padding-bottom: 105px;
   }
 }
 

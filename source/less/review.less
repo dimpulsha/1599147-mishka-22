@@ -27,6 +27,7 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    padding-top: 83px;
   }
 
   @media (min-width: @desktop-width) {
@@ -43,6 +44,7 @@
     grid-column-end: -1;
     grid-row-start: 2;
     grid-row-end: 3;
+    margin-top: 36px;
   }
 
   @media (min-width: @tablet-width) {
@@ -69,8 +71,10 @@
   margin: 0;
   font-size: 15px;
   line-height: 30px;
+  padding-bottom: 33px;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 61px;
     font-size: 17px;
     line-height: 30px;
 
@@ -78,11 +82,12 @@
       display: none;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 44px;
+  }
 }
 
-.review__author-wrapper {
-  margin-top: 33px;
-}
 
 .review__author {
   font-style: normal;
@@ -101,6 +106,9 @@
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
+    align-self: end;
+    justify-self: end;
+    width: 175px;
   }
 
   @media (min-width: @desktop-width) {
