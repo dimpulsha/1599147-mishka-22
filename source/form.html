@@ -50,7 +50,7 @@
                 d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z"
                 fill="black" />
             </svg>
-            <span class="user-nav__link--search-text">Поиск по сайту</span>
+            <span class="user-nav__link-search-text">Поиск по сайту</span>
           </a>
         </li>
         <li class="user-nav__item user-nav__item--cart">
@@ -68,7 +68,8 @@
       <p class="page-nav__feature-text">Бесплатная доставка по России</p>
     </nav>
     <!--     </div> -->
-  </header>  <main class="page-body__content page-content">
+  </header>
+  <main class="page-body__content page-content">
     <!-- <div class="page-content__header content-header"> -->
     <div class="page-content__title content-header">
       <div class="content-header__wrapper">
@@ -85,18 +86,20 @@
       <form class="order-section__form order-form site-form" action="https://echo.htmlacademy.ru" method="POST">
         <div class="order-form__field-group">
           <div class="order-form__wrapper">
-            <fieldset class="order-form__radio-fieldset site-form__fieldset fieldset">
-              <legend class="site-form__legend fieldset__legend">Тип</legend>
+            <!-- order-form__radio-fieldset -->
+            <fieldset class="site-form__fieldset fieldset">
+              <legend class="site-form__legend site-form__legend--kind fieldset__legend">Тип</legend>
               <ul class="order-form__radio-list site-form__field-list fieldset-item">
                 <li class="site-form__radio-item">
-                  <input class="visually-hidden" type="radio" name="product-kind" id="product-kind1-id" value="interior"
-                    checked>
+                  <input class="site-form__radio-input visually-hidden" type="radio" name="product-kind"
+                    id="product-kind1-id" value="interior" checked>
                   <label class="site-form__label site-form__box site-form__box--radio-box" for="product-kind1-id">
                     <span class="site-form__label-text">Аксессуар для интерьера</span>
                   </label>
                 </li>
                 <li class="site-form__radio-item ">
-                  <input class="visually-hidden" type="radio" name="product-kind" id="product-kind2-id" value="toys">
+                  <input class="site-form__radio-input visually-hidden" type="radio" name="product-kind"
+                    id="product-kind2-id" value="toys">
                   <label class="site-form__label site-form__box site-form__box--radio-box" for="product-kind2-id">
                     <span class="site-form__label-text">Детская игрушка</span>
                   </label>
@@ -107,44 +110,87 @@
         </div>
         <div class="order-form__field-group order-form__field-group--accented">
           <div class="order-form__wrapper">
-            <fieldset class="order-form__checkbox-fieldset site-form__fieldset fieldset">
-              <legend class="site-form__legend fieldset__legend">Цвет</legend>
+            <!--  order-form__checkbox-fieldset -->
+            <fieldset class="site-form__fieldset fieldset">
+              <legend class="site-form__legend site-form__legend--color fieldset__legend">Цвет</legend>
               <ul class="order-form__checkbox-list site-form__field-list fieldset-item">
                 <li class="site-form__checkbox-item">
-                  <input class="visually-hidden" type="checkbox" name="product-color" id="product-color1-id"
-                    value="white" checked>
-                  <label class="site-form__label site-form__box site-form__box--check-box" for="product-color1-id"><span
-                      class="site-form__label-text">Белый</span></label>
+                  <input class="site-form__checkbox-input visually-hidden" type="checkbox" name="product-color"
+                    id="product-color1-id" value="white" checked>
+                  <label class="site-form__label site-form__box site-form__box--checkbox" for="product-color1-id"><span
+                      class="site-form__label-text">Белый</span>
+                    <svg class="site-form__box-tick" width="24" height="17" viewBox="0 0 24 17" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M23.963 1.68385L22.9687 0.692322L8.76555 14.7862L1.73497 7.77467L0.740742 8.76619L7.77132 15.7777L8.76555 16.7692L9.83079 15.7777L23.963 1.68385Z"
+                        fill="black" />
+                    </svg>
+                  </label>
                 </li>
                 <li class="site-form__checkbox-item">
-                  <input class="visually-hidden" type="checkbox" name="product-color" id="product-color2-id"
-                    value="grey" checked>
-                  <label class="site-form__label site-form__box site-form__box--check-box" for="product-color2-id"><span
-                      class="site-form__label-text">Серый</span></label>
+                  <input class="site-form__checkbox-input visually-hidden" type="checkbox" name="product-color"
+                    id="product-color2-id" value="grey" checked>
+                  <label class="site-form__label site-form__box site-form__box--checkbox" for="product-color2-id"><span
+                      class="site-form__label-text">Серый</span>
+                    <svg class="site-form__box-tick" width="24" height="17" viewBox="0 0 24 17" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M23.963 1.68385L22.9687 0.692322L8.76555 14.7862L1.73497 7.77467L0.740742 8.76619L7.77132 15.7777L8.76555 16.7692L9.83079 15.7777L23.963 1.68385Z"
+                        fill="black" />
+                    </svg>
+                  </label>
                 </li>
                 <li class="site-form__checkbox-item">
-                  <input class="visually-hidden" type="checkbox" name="product-color" id="product-color3-id"
-                    value="tiffany">
-                  <label class="site-form__label site-form__box site-form__box--check-box" for="product-color3-id"><span
-                      class="site-form__label-text">«Тиффани»</span></label>
+                  <input class="site-form__checkbox-input visually-hidden" type="checkbox" name="product-color"
+                    id="product-color3-id" value="tiffany">
+                  <label class="site-form__label site-form__box site-form__box--checkbox" for="product-color3-id"><span
+                      class="site-form__label-text">«Тиффани»</span>
+                    <svg class="site-form__box-tick" width="24" height="17" viewBox="0 0 24 17" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M23.963 1.68385L22.9687 0.692322L8.76555 14.7862L1.73497 7.77467L0.740742 8.76619L7.77132 15.7777L8.76555 16.7692L9.83079 15.7777L23.963 1.68385Z"
+                        fill="black" />
+                    </svg>
+                  </label>
                 </li>
                 <li class="site-form__checkbox-item">
-                  <input class="visually-hidden" type="checkbox" name="product-color" id="product-color4-id"
-                    value="black">
-                  <label class="site-form__label site-form__box site-form__box--check-box" for="product-color4-id"><span
-                      class="site-form__label-text">Черный</span></label>
+                  <input class="site-form__checkbox-input visually-hidden" type="checkbox" name="product-color"
+                    id="product-color4-id" value="black">
+                  <label class="site-form__label site-form__box site-form__box--checkbox" for="product-color4-id"><span
+                      class="site-form__label-text">Черный</span>
+                    <svg class="site-form__box-tick" width="24" height="17" viewBox="0 0 24 17" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M23.963 1.68385L22.9687 0.692322L8.76555 14.7862L1.73497 7.77467L0.740742 8.76619L7.77132 15.7777L8.76555 16.7692L9.83079 15.7777L23.963 1.68385Z"
+                        fill="black" />
+                    </svg>
+                  </label>
                 </li>
                 <li class="site-form__checkbox-item">
-                  <input class="visually-hidden" type="checkbox" name="product-color" id="product-color5-id"
-                    value="pink">
-                  <label class="site-form__label site-form__box site-form__box--check-box" for="product-color5-id"><span
-                      class="site-form__label-text">Розовый</span></label>
+                  <input class="site-form__checkbox-input visually-hidden" type="checkbox" name="product-color"
+                    id="product-color5-id" value="pink">
+                  <label class="site-form__label site-form__box site-form__box--checkbox" for="product-color5-id"><span
+                      class="site-form__label-text">Розовый</span>
+                    <svg class="site-form__box-tick" width="24" height="17" viewBox="0 0 24 17" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M23.963 1.68385L22.9687 0.692322L8.76555 14.7862L1.73497 7.77467L0.740742 8.76619L7.77132 15.7777L8.76555 16.7692L9.83079 15.7777L23.963 1.68385Z"
+                        fill="black" />
+                    </svg>
+                  </label>
                 </li>
                 <li class="site-form__checkbox-item">
-                  <input class="visually-hidden" type="checkbox" name="product-color" id="product-color6-id"
-                    value="orange">
-                  <label class="site-form__label site-form__box site-form__box--check-box" for="product-color6-id"><span
-                      class="site-form__label-text">Оранжевый</span></label>
+                  <input class="site-form__checkbox-input visually-hidden" type="checkbox" name="product-color"
+                    id="product-color6-id" value="orange">
+                  <label class="site-form__label site-form__box site-form__box--checkbox" for="product-color6-id"><span
+                      class="site-form__label-text">Оранжевый</span>
+                    <svg class="site-form__box-tick" width="24" height="17" viewBox="0 0 24 17" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M23.963 1.68385L22.9687 0.692322L8.76555 14.7862L1.73497 7.77467L0.740742 8.76619L7.77132 15.7777L8.76555 16.7692L9.83079 15.7777L23.963 1.68385Z"
+                        fill="black" />
+                    </svg>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -152,8 +198,9 @@
         </div>
         <div class="order-form__field-group">
           <div class="order-form__wrapper">
-            <fieldset class="order-form__person-fieldset site-form__fieldset fieldset">
-              <legend class="site-form__legend fieldset__legend">ФИО</legend>
+            <!-- order-form__person-fieldset -->
+            <fieldset class="site-form__fieldset fieldset">
+              <legend class="site-form__legend site-form__legend--fio fieldset__legend">ФИО</legend>
               <ul class="order-form__person-list site-form__field-list fieldset-item">
                 <li class="site-form__text-field site-form__text-field--name site-form__label-text">
                   <label class="site-form__label site-form__label-text" for="name-id">Имя:</label>
@@ -162,13 +209,15 @@
                 </li>
                 <li class="site-form__text-field">
                   <label class="site-form__label site-form__label-text" for="last-name-id">Фамилия:</label>
-                  <input class="site-form__text-input site-form__text-field--last-name" type="text" name="last-name"
-                    id="last-name-id" placeholder="Укажите фамилию*" required>
+                  <!-- site-form__text-input-last-name -->
+                  <input class="site-form__text-input" type="text" name="last-name" id="last-name-id"
+                    placeholder="Укажите фамилию*" required>
                 </li>
                 <li class="site-form__text-field">
                   <label class="site-form__label site-form__label-text" for="middle-name-id">Отчество:</label>
-                  <input class="site-form__text-input site-form__text-field--middle-name" type="text" name="middle-name"
-                    id="middle-name-id" placeholder="Отчество, если сами пожелаете">
+                  <!-- site-form__text-input--middle-name -->
+                  <input class="site-form__text-input" type="text" name="middle-name" id="middle-name-id"
+                    placeholder="Отчество, если сами пожелаете">
                 </li>
               </ul>
             </fieldset>
@@ -176,8 +225,9 @@
         </div>
         <div class="order-form__field-group order-form__field-group--accented">
           <div class="order-form__wrapper">
-            <fieldset class="order-form__phone-fieldset site-form__fieldset fieldset">
-              <legend class="site-form__legend fieldset__legend">Тел</legend>
+            <!--  order-form__phone-fieldset -->
+            <fieldset class="site-form__fieldset fieldset">
+              <legend class="site-form__legend site-form__legend--tel fieldset__legend">Тел</legend>
               <!--   <div class="form-text-input"> -->
               <label class="visually-hidden" for="phone-id">Введите номер телефона</label>
               <input class="site-form__text-input fieldset-item site-form__text-input--tel" type="tel" name="phone"
@@ -185,7 +235,7 @@
               <!-- </div> -->
             </fieldset>
             <fieldset class="order-form__email-fieldset site-form__fieldset fieldset">
-              <legend class="site-form__legend fieldset__legend">E-mail</legend>
+              <legend class="site-form__legend site-form__legend--mail fieldset__legend">E-mail</legend>
               <!--    <div class="form-text-input"> -->
               <label class="visually-hidden" for="email-id">Введите адрес электронной почты</label>
               <input class="site-form__text-input fieldset-item site-form__text-input--email" type="email" name="email"
@@ -194,18 +244,21 @@
             </fieldset>
           </div>
         </div>
-        <div class="order-form__wrapper">
-          <fieldset class="order-form__textarea-fieldset site-form__fieldset fieldset">
-            <legend class="site-form__legend fieldset__legend">Доп</legend>
-            <!--  <div class="form-textarea-input"> -->
-            <label class="visually-hidden" for="text-id">Дополнительная информация</label>
-            <textarea class="site-form__textarea-input fieldset-item" name="text" id="text-id" cols="25" rows="6"
-              placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            <!--    </div> -->
-          </fieldset>
-          <div class="order-form__form-footer">
-            <p class="order-form__footer-text site-form__text text">*Поля обязательны для заполнения</p>
-            <button class="button order-form__button site-form__button" type="submit">Отправить</button>
+        <div class="order-form__field-group">
+          <div class="order-form__wrapper">
+            <!-- order-form__textarea-fieldset -->
+            <fieldset class="site-form__fieldset fieldset">
+              <legend class="site-form__legend site-form__legend--add fieldset__legend">Доп</legend>
+              <!--  <div class="form-textarea-input"> -->
+              <label class="visually-hidden" for="text-id">Дополнительная информация</label>
+              <textarea class="order-form__textarea-input site-form__textarea-input fieldset-item" name="text"
+                id="text-id" cols="25" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <!--    </div> -->
+            </fieldset>
+            <div class="order-form__form-footer">
+              <p class="order-form__footer-text site-form__text text">*Поля обязательны для заполнения</p>
+              <button class="button order-form__button site-form__button" type="submit">Отправить заказ</button>
+            </div>
           </div>
         </div>
       </form>
@@ -240,7 +293,7 @@
       </a>
       <ul class="page-footer__social-list social-list">
         <li class="social-list__item">
-          <a href="#">
+          <a class="social-list__link" href="#">
             <span class="visually-hidden">Instagramm</span>
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -250,7 +303,7 @@
           </a>
         </li>
         <li class="social-list__item">
-          <a href="#">
+          <a class="social-list__link" href="#">
             <span class="visually-hidden">Facebook</span>
             <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -260,7 +313,7 @@
           </a>
         </li>
         <li class="social-list__item">
-          <a href="#">
+          <a class="social-list__link" href="#">
             <span class="visually-hidden">Twitter</span>
             <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -270,16 +323,19 @@
           </a>
         </li>
       </ul>
-      <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span
-            class="visually-hidden">HTML-Academy</span>
-          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
-              fill="#63D1BB" />
-          </svg>
-        </a>
+      <div class="page-footer__copyright-wrapper">
+        <div class="page-footer__copyright copyright">
+          <p class="copyright__text">Разработано</p>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span
+              class="visually-hidden">HTML-Academy</span>
+            <svg class="copyright__icon" width="27" height="35" viewBox="0 0 27 35" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
+                fill="#63D1BB" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
