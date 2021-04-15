@@ -1,9 +1,14 @@
 //Задает общие параметры стиля и поведения для всех форм всего сайта
+
 .site-form__fieldset {
   padding: 0;
   margin: 0;
   border: none;
   //border-top: 1px solid salmon; нужен в мобильной версии
+
+  @media (max-width: @mobile-only-width) {
+    border-top: 1px solid @form-legend-decor;
+  }
 }
 
 .site-form__legend {
@@ -12,6 +17,72 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @legend-color;
+}
+
+.site-form__legend--kind {
+  @media (max-width: @mobile-only-width) {
+    padding-right: 23px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: 0;
+  }
+}
+
+.site-form__legend--color {
+  @media (max-width: @mobile-only-width) {
+    padding-right: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: 0;
+  }
+}
+
+.site-form__legend--fio {
+  @media (max-width: @mobile-only-width) {
+    padding-right: 17px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: 0;
+  }
+}
+
+.site-form__legend--tel {
+  @media (max-width: @mobile-only-width) {
+    padding-right: 26px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: 0;
+  }
+}
+
+.site-form__legend--mail {
+  @media (max-width: @mobile-only-width) {
+    padding-right: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: 0;
+  }
+}
+
+.site-form__legend--add {
+  @media (max-width: @mobile-only-width) {
+    padding-right: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: 0;
+  }
 }
 
 .site-form__field-list {
@@ -32,12 +103,13 @@
 }
 
 .site-form__box {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 19px;
 }
 
-.site-form__box--check-box::before {
+.site-form__box--checkbox::before {
   content: "";
   box-sizing: border-box;
   width: 38px;
@@ -50,19 +122,77 @@
   }
 }
 
+.site-form__box-tick {
+  display: none;
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  width: 24px;
+  height: 17px;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: 13px;
+  }
+}
+
+.site-form__checkbox-input:hover + .site-form__box--checkbox::before {
+  border-color: @checkbox-color-radio-checked;
+}
+
+.site-form__checkbox-input:active + .site-form__box--checkbox::before {
+  border-color: fade(@checkbox-color, 30%);
+}
+
+.site-form__checkbox-input:checked + .site-form__box--checkbox svg {
+  display: initial;
+}
+
+.site-form__box--radio-box {
+  position: relative;
+}
+
 .site-form__box--radio-box::before {
   content: "";
   box-sizing: border-box;
-  width: 41px;
-  height: 41px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 2px solid @checkbox-color;
 
   @media (min-width: @tablet-width) {
-    width: 51px;
-    height: 51px;
+    width: 50px;
+    height: 50px;
   }
 }
+
+.site-form__radio-input:checked + .site-form__box--radio-box::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 12px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: @checkbox-color-radio-checked;
+
+  @media (min-width: @tablet-width) {
+    top: 15px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.site-form__radio-input:hover + .site-form__box--radio-box::before {
+  border-color: @checkbox-color-radio-checked;
+}
+
+.site-form__radio-input:active + .site-form__box--radio-box::before {
+  border-color: fade(@checkbox-color, 30%);
+}
+
 
 .site-form__text-input {
   display: inline-block;
@@ -78,6 +208,7 @@
   border: none;
   border-bottom: 2px solid @checkbox-color;
   background-color: transparent;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     font-size: 19px;
@@ -89,6 +220,18 @@
   }
 }
 
+.site-form__text-input:hover {
+  border-color: @input-text-active;
+}
+
+.site-form__text-input:focus {
+  border-color: @input-text-active;
+}
+
+.site-form__text-input:active {
+  border-color: @input-text-active;
+}
+
 .site-form__text-field {
   @media (min-width: @tablet-width) {
     display: grid;
@@ -96,15 +239,15 @@
     column-gap: 24px;
   }
 }
-
-.site-form__text-field--last-name {
+/*
+.site-form__text-input--last-name {
   column-gap: 25px;
 }
 
-.site-form__text-field--middle-name {
+.site-form__text-input--middle-name {
   column-gap: 27px;
 }
-
+ */
 .site-form__textarea-input {
   display: inline-block;
   box-sizing: border-box;
@@ -125,6 +268,19 @@
   }
 }
 
+.site-form__textarea-input:hover {
+  border-color: @input-text-active;
+}
+
+.site-form__textarea-input:focus {
+  border-color: @input-text-active;
+}
+
+.site-form__textarea-input:active {
+  border-color: @input-text-active;
+}
+
+
 .site-form__label-text {
   align-self: center;
 }
@@ -132,4 +288,9 @@
 .site-form__text {
   font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
