@@ -39,6 +39,19 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+
+    &:hover path {
+      fill: @footer-logo-active;
+    }
+
+    &:focus path {
+      fill: @footer-logo-active;
+    }
+
+    &:active path {
+      fill: @footer-logo-active;
+      opacity: 0.3;
+    }
   }
 }
 
