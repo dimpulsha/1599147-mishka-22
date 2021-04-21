@@ -24,7 +24,7 @@
     background-repeat: repeat-x;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
     &::after {
       height: 17px;
       background-image: url("../img/zigzag-line-tablet.svg");
@@ -32,11 +32,10 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  /*  @media (min-width: @desktop-width) {
     &::after {
       display: none;
-    }
-  }
+    } */
 }
 
 .promo__wrapper {
