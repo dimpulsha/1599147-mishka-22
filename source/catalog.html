@@ -16,13 +16,13 @@
 
 <body class="page-body">
   <header class="page-body__header page-header">
-    <a href="index.html" class="page-header__logo">
-      <!-- img изменится при верстке адаптива -->
-      <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" width="86"
-        height="35">
+    <a class="page-header__logo" href="index.html">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+        <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" >
+      </picture>
     </a>
-    <!-- page-header__wrapper - хз зачем -->
-    <!--  <div class="page-header__wrapper"> -->
     <nav class="page-nav page-header__nav">
       <button class="page-nav__button" type="button"><span class="visually-hidden">Показать меню</span>
         <!-- пока так. при верстке графики изменить -->

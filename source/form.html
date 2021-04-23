@@ -16,13 +16,13 @@
 
 <body class="page-body">
   <header class="page-body__header page-header">
-    <a class="page-header__logo">
-      <!-- img изменится при верстке адаптива -->
-      <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" width="86"
-        height="35">
+    <a class="page-header__logo" href="index.html">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+        <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" >
+      </picture>
     </a>
-    <!-- page-header__wrapper - хз зачем -->
-    <!--  <div class="page-header__wrapper"> -->
     <nav class="page-nav page-header__nav">
       <button class="page-nav__button" type="button"><span class="visually-hidden">Показать меню</span>
         <!-- пока так. при верстке графики изменить -->
@@ -76,7 +76,7 @@
   </header>
   <main class="page-body__content page-content">
     <!-- <div class="page-content__header content-header"> -->
-    <div class="page-content__title content-header">
+    <div class="page-content__title content-header content-header--decorated">
       <div class="content-header__wrapper">
         <!-- отступы - посмотреть после сетки -->
         <h1 class="content-header__title section-title section-title--main">Вязание на заказ</h1>
@@ -104,7 +104,7 @@
                 </li>
                 <li class="site-form__radio-item ">
                   <input class="site-form__radio-input visually-hidden" type="radio" name="product-kind"
-                    id="product-kind2-id" value="toys">
+                    id="product-kind2-id" value="toys" disabled>
                   <label class="site-form__label site-form__box site-form__box--radio-box" for="product-kind2-id">
                     <span class="site-form__label-text">Детская игрушка</span>
                   </label>
@@ -147,7 +147,7 @@
                 </li>
                 <li class="site-form__checkbox-item">
                   <input class="site-form__checkbox-input visually-hidden" type="checkbox" name="product-color"
-                    id="product-color3-id" value="tiffany">
+                    id="product-color3-id" value="tiffany" disabled>
                   <label class="site-form__label site-form__box site-form__box--checkbox" for="product-color3-id"><span
                       class="site-form__label-text">«Тиффани»</span>
                     <svg class="site-form__box-tick" width="24" height="17" viewBox="0 0 24 17" fill="none"

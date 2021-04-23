@@ -148,6 +148,16 @@
   display: initial;
 }
 
+.site-form__checkbox-input:disabled + .site-form__box--checkbox::before {
+  border-color: fade(@checkbox-color, 30%);
+  cursor: not-allowed;
+}
+
+.site-form__checkbox-input:disabled + .site-form__box {
+  color: fade(@checkbox-color, 30%);
+  cursor: not-allowed;
+}
+
 .site-form__box--radio-box {
   position: relative;
 }
@@ -193,6 +203,20 @@
   border-color: fade(@checkbox-color, 30%);
 }
 
+.site-form__radio-input:disabled + .site-form__box--radio-box::before {
+  border-color: fade(@checkbox-color, 30%);
+  cursor: not-allowed;
+}
+
+.site-form__radio-input:disabled:hover + .site-form__box--radio-box::before {
+  border-color: fade(@checkbox-color, 30%);
+  cursor: not-allowed;
+}
+
+.site-form__radio-input:disabled + .site-form__box {
+  color: fade(@checkbox-color, 30%);
+  cursor: not-allowed;
+}
 
 .site-form__text-input {
   display: inline-block;
@@ -239,15 +263,7 @@
     column-gap: 24px;
   }
 }
-/*
-.site-form__text-input--last-name {
-  column-gap: 25px;
-}
 
-.site-form__text-input--middle-name {
-  column-gap: 27px;
-}
- */
 .site-form__textarea-input {
   display: inline-block;
   box-sizing: border-box;
