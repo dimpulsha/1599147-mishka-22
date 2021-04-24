@@ -20,7 +20,7 @@
       <picture>
         <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
-        <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" >
+        <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка">
       </picture>
     </a>
     <nav class="page-nav page-header__nav">
@@ -87,10 +87,10 @@
           <li class="production-list__item production-item">
             <a class="production-item__card-link production-item__img-wrapper" href="#">
               <picture>
-                <source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg">
-                <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg">
-                <img class="production-item__img"
-                  src="img/pr-mobile-1.jpg" alt="Зайчик-попрыгайчик. Цвет: голубой">
+                <source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img class="production-item__img" src="img/pr-mobile-1.jpg" srcset="img/pr-mobile-1@2x.jpg 2x"
+                  alt="Зайчик-попрыгайчик. Цвет: голубой">
               </picture>
             </a>
             <div class="production-item__content-wrapper">
@@ -113,9 +113,9 @@
           <li class="production-list__item production-item">
             <a class="production-item__card-link production-item__img-wrapper" href="#">
               <picture>
-                <source media="(min-width: 1150px)" srcset="img/photo-2-desktop.jpg">
-                <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg">
-                <img class="production-item__img" src="img/pr-mobile-2.jpg"
+                <source media="(min-width: 1150px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x ">
+                <img class="production-item__img" src="img/pr-mobile-2.jpg" srcset="img/pr-mobile-2@2x.jpg 2x"
                   alt="Корзинка для белья. Цвет: розовый/белый" width="260" height="195">
               </picture>
             </a>
@@ -140,9 +140,9 @@
           <li class="production-list__item production-item">
             <a class="production-item__card-link production-item__img-wrapper" href="#">
               <picture>
-                <source media="(min-width: 1150px)" srcset="img/photo-3-desktop.jpg">
-                <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg">
-                <img class="production-item__img" src="img/pr-mobile-3.jpg"
+                <source media="(min-width: 1150px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                <img class="production-item__img" src="img/pr-mobile-3.jpg" srcset="img/pr-mobile-1@2x.jpg 2x"
                   alt="Большая корзинка для игрушек. Вместительная и удобная" width="260" height="195">
               </picture>
             </a>
@@ -169,32 +169,34 @@
     <section class="page-content__production-promo production-promo">
       <div class="production-promo__wrapper">
         <h2 class="visually-hidden">О нашей продукции</h2>
-        <div class="production-promo__title-wrapper">
-          <svg class="production-promo__title-icon" width="32" height="22" viewBox="0 0 32 22" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M26 10L32 6V22L26 18V10ZM24 10V18C24 20.2 22.2 22 20 22H4C1.8 22 0 20.2 0 18V10C0 7.8 1.8 6 4 6H14C14 4.9 14.9 4 16 4V2H5C4.4 2 4 1.6 4 1C4 0.4 4.4 0 5 0H17C17.6 0 18 0.4 18 1V4C19.1 4 20 4.9 20 6C22.2 6 24 7.8 24 10ZM12 10H4V18H12V10ZM20 11C20 10.4 19.6 10 19 10H15C14.4 10 14 10.4 14 11C14 11.6 14.4 12 15 12H19C19.6 12 20 11.6 20 11Z"
-              fill="#63D1BB" />
-          </svg>
-          <h3 class="production-promo__title section-title section-title--h3">Процесс <br> производства</h3>
+        <div class="production-promo__content-wrapper ">
+          <div class="production-promo__title-wrapper">
+            <svg class="production-promo__title-icon" width="32" height="22" viewBox="0 0 32 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M26 10L32 6V22L26 18V10ZM24 10V18C24 20.2 22.2 22 20 22H4C1.8 22 0 20.2 0 18V10C0 7.8 1.8 6 4 6H14C14 4.9 14.9 4 16 4V2H5C4.4 2 4 1.6 4 1C4 0.4 4.4 0 5 0H17C17.6 0 18 0.4 18 1V4C19.1 4 20 4.9 20 6C22.2 6 24 7.8 24 10ZM12 10H4V18H12V10ZM20 11C20 10.4 19.6 10 19 10H15C14.4 10 14 10.4 14 11C14 11.6 14.4 12 15 12H19C19.6 12 20 11.6 20 11Z"
+                fill="#63D1BB" />
+            </svg>
+            <h3 class="production-promo__title section-title section-title--h3">Процесс <br> производства</h3>
+          </div>
+          <div class="production-promo__text-wrapper">
+            <p class="production-promo__text text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео
+              о
+              том, как появляются наши товары.</p>
+          </div>
+          <div class="production-promo__video site-video">
+            <video class="site-video__object" width="100%" height="100%">
+              <source src="#" type="video/mp4">
+            </video>
+            <button class="site-video__button" type="button"><span class="visually-hidden">Смотреть видео</span>
+              <img class="site-video__button-img" src="img/play.svg" alt="" width="101" height="77">
+            </button>
+          </div>
+          <div class="production-promo__button-wrapper">
+            <a class="production-promo__order-button button" href="form.html">Сделать заказ</a>
+          </div>
+          <!--  <div class="production-promo__decor"></div> -->
         </div>
-        <div class="production-promo__text-wrapper">
-          <p class="production-promo__text text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о
-            том, как появляются наши товары.</p>
-        </div>
-        <div class="production-promo__video site-video">
-          <video class="site-video__object" width="100%" height="100%">
-            <!-- poster="img/video-mobile.jpg" -->
-            <source src="#" type="video/mp4">
-          </video>
-          <button class="site-video__button" type="button"><span class="visually-hidden">Смотреть видео</span>
-            <img class="site-video__button-img" src="img/play.svg" alt="" width="101" height="77">
-          </button>
-        </div>
-        <!-- <div class="production-promo__button-wrapper"> -->
-          <a class="production-promo__order-button button" href="form.html">Сделать заказ</a>
-      <!--   </div> -->
-        <div class="production-promo__decor"></div>
       </div>
     </section>
   </main>
