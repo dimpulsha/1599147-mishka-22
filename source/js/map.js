@@ -12,5 +12,3 @@ function initMap() {
 
 //59.938711107524284, 30.32300448340557
 //AIzaSyDttqdubiQCKsGcu24-MBDSG9N-aFzxKJE
-
-

@@ -69,17 +69,18 @@
   }
 }
 
-.user-nav__link:hover path {
+
+.user-nav__link:hover .user-nav__link-icon {
   fill: @menu-icon-active;
   opacity: 1;
 }
 
-.user-nav__link:focus path {
+.user-nav__link:focus .user-nav__link-icon {
   fill: @menu-icon-active;
   opacity: 1;
 }
 
-.user-nav__link:active path {
+.user-nav__link:active .user-nav__link-icon {
   fill: @menu-icon-active;
   opacity: 0.3;
 }
@@ -90,6 +91,7 @@
   height: 18px;
   top: 32px;
   left: 32px;
+  opacity: 0.2;
 
   @media (min-width: @tablet-width) {
     top: 36px;
@@ -109,6 +111,7 @@
   height: 19px;
   top: 31px;
   left: 30px;
+  opacity: 0.2;
 
   @media (min-width: @tablet-width) {
     top: 35px;
