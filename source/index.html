@@ -22,16 +22,17 @@
         <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка">
       </picture>
     </a>
-    <nav class="page-nav page-header__nav">
+    <nav class="page-nav page-header__nav page-nav--open page-nav--nojs">
       <button class="page-nav__button" type="button"><span class="visually-hidden">Показать меню</span>
-        <!-- пока так. при верстке графики изменить -->
-        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 0H0V2H20V0Z" fill="#231F20" />
-          <path d="M20 6H0V8H20V6Z" fill="#231F20" />
-          <path d="M20 12H0V14H20V12Z" fill="#231F20" />
+        <svg class="page-nav__button-open-icon" width="20" height="14">
+          <use xlink:href="img/menu-sprite.svg#menu-open"></use>
+        </svg>
+        <svg class="page-nav__button-close-icon" width="21" height="20">
+          <use xlink:href="img/menu-sprite.svg#menu-close"></use>
         </svg>
       </button>
-      <ul class="page-nav__site-list page-nav__site-list--open site-nav">
+      <!-- page-nav__site-list--open -->
+      <ul class="page-nav__site-list  site-nav">
         <li class="site-nav__item">
           <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
@@ -45,7 +46,8 @@
           <a class="site-nav__link" href="#">Распродажа</a>
         </li>
       </ul>
-      <ul class="page-nav__user-list page-nav__user-list--open user-nav">
+      <!-- page-nav__user-list--open  -->
+      <ul class="page-nav__user-list user-nav">
         <li class="user-nav__item user-nav__item--search">
           <a class="user-nav__link" href="#">
             <svg class="user-nav__link-icon user-nav__link-icon--search" width="18" height="18" viewBox="0 0 18 18"
