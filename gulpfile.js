@@ -30,7 +30,6 @@ const server = (done) => {
     server: {
       baseDir: 'source'
     },
-    browser: "firefox developer edition",
     cors: true,
     notify: false,
     ui: false,
