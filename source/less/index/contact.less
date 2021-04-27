@@ -119,6 +119,19 @@
 .contact__value--mail {
   border-bottom: 1px solid @mail-borderline;
   margin-right: auto;
+
+  &:hover {
+    color: @mail-color-active;
+  }
+
+  &:focus {
+    color: @mail-color-active;
+  }
+
+  &:active {
+    color: @mail-color-active;
+    border-color: fade(@mail-color-active, 10%);
+  }
 }
 
 .contact__map-wrapper {
