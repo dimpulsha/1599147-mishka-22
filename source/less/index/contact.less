@@ -34,6 +34,10 @@
   position: relative;
   padding-bottom: 28px;
 
+  @media (max-width: @mobile-only-width) {
+    font-size: 18px;
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 22px;
 
@@ -69,11 +73,10 @@
   }
 }
 
-
 .contact__list {
   padding: 0;
   margin: 0;
-  padding-bottom: 22px;
+  padding-bottom: 30px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
@@ -178,7 +181,7 @@
 }
 
 .contact__write-button-wrapper {
-  margin-top: 42px;
+  margin-top: 33px;
   margin-bottom: 39px;
   margin-left: 30px;
   margin-right: 30px;
