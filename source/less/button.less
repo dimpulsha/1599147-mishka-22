@@ -31,3 +31,22 @@
   background-color: @button-active-bg;
   color: fade(@button-active-color, 30%);
 }
+
+.button--modal {
+  border: none;
+  color: @button-active-color;
+  background-color: @modal-button-bg;
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+  }
+
+  &:hover {
+    background-color: @modal-button-active-bg;
+  }
+
+  &:active {
+    color: fade(@text-color, 30%);
+    background-color: fade(@modal-button-active-bg, 30%);
+  }
+}
