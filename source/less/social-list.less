@@ -17,14 +17,18 @@
   margin-right: 41px;
 }
 
-.social-list__link:hover path {
-  fill: @social-icon-active;
-}
+.social-icon {
+  fill: @social-icon;
 
-.social-list__link:focus path {
-  fill: @social-icon-active;
-}
+  .social-list__link:hover & {
+    fill: @social-icon-active;
+  }
 
-.social-list__link:active path {
-  fill: fade(@social-icon-active, 30%);
+  .social-list__link:focus & {
+    fill: @social-icon-active;
+  }
+
+  .social-list__link:active & {
+    fill: fade(@social-icon-active, 30%);
+  }
 }

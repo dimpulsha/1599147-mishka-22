@@ -12,11 +12,15 @@
   font-size: 19px;
   line-height: 18px;
   color: @menu-text-color;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 8px;
+  }
 }
 
 .copyright__link {
   display: block;
-  margin-top: 8px;
+  margin-top: 5px;
 
   &:hover path {
     fill: @copyrifgt-active;

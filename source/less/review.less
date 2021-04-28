@@ -7,14 +7,25 @@
     background-repeat: no-repeat;
     background-position: top left;
 
-    /*  @media (min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx) {
       background-image: url("../img/review-tablet@2x.png");
       background-size: 350px 457px;
-    } */
+    }
   }
 }
 
 .review--decorated {
+  &::after {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 6px;
+    left: 0;
+    bottom: 0;
+    background-image: url("../img/zigzag-line-mobile.svg");
+    background-repeat: repeat-x;
+  }
+
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
     &::after {
       position: absolute;
@@ -116,7 +127,7 @@
     grid-column-end: -1;
     grid-row-start: 2;
     grid-row-end: 3;
-    margin-top: 39px;
+    margin-top: 35px;
     margin-bottom: 96px;
   }
 }
@@ -141,7 +152,8 @@
   margin: 0;
   font-size: 15px;
   line-height: 30px;
-  padding-bottom: 33px;
+  padding-bottom: 30px;
+
 
   @media (min-width: @tablet-width) {
     padding-bottom: 61px;
@@ -154,7 +166,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 44px;
+    padding-bottom: 40px;
+    padding-right: 65px;
   }
 }
 
@@ -164,6 +177,10 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    font-size: 18px;
+  }
 }
 
 .review__author-contact {
@@ -179,6 +196,7 @@
     align-self: end;
     justify-self: end;
     width: 175px;
+    margin-bottom: 3px;
   }
 
   @media (min-width: @desktop-width) {
@@ -186,5 +204,6 @@
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 2;
+    margin-bottom: 5px;
   }
 }

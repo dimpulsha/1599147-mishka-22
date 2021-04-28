@@ -10,7 +10,6 @@
   }
 }
 
-
 .page-nav__button {
   position: absolute;
   right: 30px;
@@ -28,6 +27,7 @@
 .page-nav__site-list {
   @media (max-width: @mobile-only-width) {
     display: none;
+    // display: flex;
     flex-direction: column;
     justify-content: start;
   }
@@ -46,15 +46,11 @@
   }
 }
 
-@media (max-width: @mobile-only-width) {
-  .page-nav__site-list--open {
-    display: flex;
-  }
-}
 
 .page-nav__user-list {
   @media (max-width: @mobile-only-width) {
     display: none;
+    //display: flex;
     flex-direction: column;
     justify-content: start;
   }
@@ -72,11 +68,53 @@
   }
 }
 
-@media (max-width: @mobile-only-width) {
-  .page-nav__user-list--open {
+
+//Открываем меню
+.page-nav--open .page-nav__site-list {
+  @media (max-width: @mobile-only-width) {
     display: flex;
   }
 }
+
+.page-nav--nojs .page-nav__site-list {
+  @media (max-width: @mobile-only-width) {
+    display: flex;
+  }
+}
+
+.page-nav--open .page-nav__user-list {
+  @media (max-width: @mobile-only-width) {
+    display: flex;
+  }
+}
+
+.page-nav--nojs .page-nav__user-list {
+  @media (max-width: @mobile-only-width) {
+    display: flex;
+  }
+}
+
+// отображение кнопок
+.page-nav__button-close-icon {
+  display: none;
+}
+
+.page-nav--open .page-nav__button-close-icon {
+  display: initial;
+}
+
+.page-nav--nojs .page-nav__button-close-icon {
+  display: initial;
+}
+
+.page-nav--open .page-nav__button-open-icon {
+  display: none;
+}
+
+.page-nav--nojs .page-nav__button-open-icon {
+  display: none;
+}
+
 
 .page-nav__feature-text {
   font-size: 15px;
