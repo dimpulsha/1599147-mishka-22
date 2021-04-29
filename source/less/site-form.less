@@ -26,7 +26,12 @@
 
   @media (min-width: @tablet-width) {
     top: 18px;
-    left: 0;
+    left: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 19px;
+    left: 60px;
   }
 }
 
@@ -37,7 +42,12 @@
 
   @media (min-width: @tablet-width) {
     top: 18px;
-    left: 0;
+    left: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 19px;
+    left: 60px;
   }
 }
 
@@ -48,7 +58,12 @@
 
   @media (min-width: @tablet-width) {
     top: 18px;
-    left: 0;
+    left: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 19px;
+    left: 60px;
   }
 }
 
@@ -59,7 +74,12 @@
 
   @media (min-width: @tablet-width) {
     top: 18px;
-    left: 0;
+    left: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 17px;
+    left: 60px;
   }
 }
 
@@ -70,7 +90,12 @@
 
   @media (min-width: @tablet-width) {
     top: 18px;
-    left: 0;
+    left: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 17px;
+    left: 60px;
   }
 }
 
@@ -81,7 +106,12 @@
 
   @media (min-width: @tablet-width) {
     top: 18px;
-    left: 0;
+    left: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 19px;
+    left: 60px;
   }
 }
 
@@ -107,6 +137,14 @@
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 19px;
+
+  @media (min-width: @tablet-width) {
+    column-gap: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 29px;
+  }
 }
 
 .site-form__box--checkbox::before {
@@ -221,7 +259,7 @@
 .site-form__text-input {
   display: inline-block;
   box-sizing: border-box;
-  min-height: 52px;
+  min-height: 48px;
   width: 100%;
   padding: 0;
   //padding-left: 18px;  для планшетов и выше
@@ -237,6 +275,7 @@
   @media (min-width: @tablet-width) {
     font-size: 19px;
     padding-left: 17px;
+    min-height: 52px;
   }
 
   &::placeholder {
@@ -261,6 +300,18 @@
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 24px;
+  }
+}
+
+.site-form__text-input--tel {
+  @media (max-width: @mobile-only-width) {
+    margin-top: 6px;
+  }
+}
+
+.site-form__text-input--email {
+  @media (max-width: @mobile-only-width) {
+    margin-top: 7px;
   }
 }
 

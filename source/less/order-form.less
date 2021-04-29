@@ -1,9 +1,14 @@
 // Задается раскладка конкретной формы заказа
 .order-form__field-group {
   padding-top: 16px;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 49px;
+    padding-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -40,15 +45,21 @@
   padding-top: 30px;
 
   @media (min-width: @tablet-width) {
-    row-gap: 24px;
+    row-gap: 26px;
+    //margin-top: 3px;
+    margin-left: 3px;
     padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    row-gap: 26px;
   }
 }
 
 .order-form__checkbox-list {
   display: grid;
   row-gap: 23px;
-  padding-top: 25px;
+  padding-top: 24px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -65,27 +76,44 @@
 }
 
 .order-form__person-list {
-  padding-top: 29px;
+  padding-top: 22px;
   display: grid;
-  row-gap: 22px;
+  row-gap: 14px;
 
   @media (min-width: @tablet-width) {
-    row-gap: 24px;
+    row-gap: 25px;
     padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 3px;
+    row-gap: 24px;
   }
 }
 
 .order-form__email-fieldset {
   margin-top: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 25px;
+  }
 }
 
 .order-form__textarea-input {
   margin-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .order-form__footer-text {
-  margin-top: 17px;
-  margin-bottom: 30px;
+  margin-top: 7px;
+  margin-bottom: 31px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 3;
@@ -104,18 +132,18 @@
 
 .order-form__form-footer {
   @media (max-width: @mobile-only-width) {
-    margin-bottom: 39px;
+    margin-bottom: 35px;
   }
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding-top: 53px;
+    padding-top: 48px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(6, 1fr);
-    padding-top: 49px;
+    padding-top: 45px;
   }
 }
 

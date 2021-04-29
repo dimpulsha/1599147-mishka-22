@@ -33,6 +33,34 @@
   }
 }
 
+.content-header--decorated-inner {
+  @media (min-width: @tablet-width) {
+    &::after {
+      position: absolute;
+      content: " ";
+      width: 100%;
+      height: 24px;
+      left: 0;
+      bottom: -12px;
+      background-image: url("../img/zigzag-head-tablet.svg");
+      background-repeat: repeat-x;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      position: absolute;
+      content: " ";
+      width: 100%;
+      height: 34px;
+      left: 0;
+      bottom: -17px;
+      background-image: url("../img/zigzag-head-inner-desktop.svg");
+      background-repeat: repeat-x;
+    }
+  }
+}
+
 .content-header__wrapper {
   min-width: 260px;
   padding: 0 30px;
@@ -56,12 +84,13 @@
   padding-bottom: 74px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 101px;
-    padding-bottom: 75px;
+    padding-top: 102px;
+    padding-bottom: 74px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 102px;
     padding-bottom: 95px;
+    padding-left: 3px;
   }
 }
