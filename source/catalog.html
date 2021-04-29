@@ -96,7 +96,7 @@
                 <button class="production-item__add-cart" type="button"><span class="visually-hidden">Заказать</span>
                   <svg class="production-item__add-cart-icon" width="20" height="19">
                     <use xlink:href="img/icon-sprite.svg#cart-ico"></use>
-                </svg>
+                  </svg>
                 </button>
               </div>
             </div>
@@ -121,7 +121,7 @@
                 <button class="production-item__add-cart" type="button"><span class="visually-hidden">Заказать</span>
                   <svg class="production-item__add-cart-icon" width="20" height="19">
                     <use xlink:href="img/icon-sprite.svg#cart-ico"></use>
-                </svg>
+                  </svg>
                 </button>
               </div>
             </div>
@@ -137,14 +137,15 @@
             </a>
             <div class="production-item__content-wrapper">
               <a class="production-item__card-link production-item__card-link--title" href="#">
-                <h3 class="production-item__title section-title section-title--h3">Большая корзинка <br> для игрушек</h3>
+                <h3 class="production-item__title section-title section-title--h3">Большая корзинка <br> для игрушек
+                </h3>
               </a>
               <p class="production-item__desc text">Диаметр 30 см, высота 30 см</p>
               <div class="production-item__order">
                 <p class="production-item__price">1 500 руб.</p>
                 <button class="production-item__add-cart" type="button"><span class="visually-hidden">Заказать</span>
                   <svg class="production-item__add-cart-icon" width="20" height="19">
-                      <use xlink:href="img/icon-sprite.svg#cart-ico"></use>
+                    <use xlink:href="img/icon-sprite.svg#cart-ico"></use>
                   </svg>
                 </button>
               </div>
@@ -237,34 +238,42 @@
       </div>
     </div>
   </footer>
-  <section class="page-content__modal modal">
-    <h2 class="visually-hidden">Форма заказа товара</h2>
-    <div class="modal__content-wrapper">
-      <p class="modal__title">Добавить <br> в корзину</p>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <p class="modal__legend">Выберите размер:</p>
-        <ul class="modal__size-list">
-          <li class="modal__size-item">
-            <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size1-id"
-              value="S" checked>
-            <label class="modal__size-label" for="product-size1-id">S</label>
-          </li>
-          <li class="modal__size-item">
-            <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size2-id"
-              value="M">
-            <label class="modal__size-label" for="product-size2-id">M</label>
-          </li>
-          <li class="modal__size-item">
-            <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size3-id"
-              value="L">
-            <label class="modal__size-label" for="product-size3-id">L</label>
-          </li>
-        </ul>
-        <button class="button button--modal modal__button">Добавить</button>
-      </form>
+  <section class="page-content__modal">
+    <div class="modal">
+      <h2 class="visually-hidden">Форма заказа товара</h2>
+      <div class="modal__content-wrapper">
+        <p class="modal__title">Добавить <br> в корзину</p>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <p class="modal__legend">Выберите размер:</p>
+          <ul class="modal__size-list">
+            <li class="modal__size-item">
+              <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size1-id"
+                value="S" checked>
+              <label class="modal__size-label" for="product-size1-id">S</label>
+            </li>
+            <li class="modal__size-item">
+              <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size2-id"
+                value="M">
+              <label class="modal__size-label" for="product-size2-id">M</label>
+            </li>
+            <li class="modal__size-item">
+              <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size3-id"
+                value="L">
+              <label class="modal__size-label" for="product-size3-id">L</label>
+            </li>
+          </ul>
+          <button class="button button--modal modal__button">Добавить</button>
+        </form>
+      </div>
+      <button class="modal__close-button" type="button"><span class="visually-hidden">Закрыть окно</span>
+        <svg class="modal__close-button-icon" width="21" height="20">
+          <use xlink:href="img/menu-sprite.svg#menu-close"></use>
+        </svg>
+      </button>
     </div>
   </section>
-  <!-- <script src="js/nav.js"></script> -->
+  <script src="js/nav.js"></script> 
+  <script src="js/modal.js"></script>
 </body>
 
 </html>
