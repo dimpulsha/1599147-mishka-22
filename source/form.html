@@ -71,7 +71,7 @@
   </header>
   <main class="page-body__content page-content">
     <!-- <div class="page-content__header content-header"> -->
-    <div class="page-content__title content-header content-header--decorated">
+    <div class="page-content__title content-header content-header--decorated-inner">
       <div class="content-header__wrapper">
         <!-- отступы - посмотреть после сетки -->
         <h1 class="content-header__title section-title section-title--main">Вязание на заказ</h1>
@@ -201,7 +201,7 @@
             <!-- order-form__person-fieldset -->
             <fieldset class="site-form__fieldset fieldset">
               <legend class="site-form__legend site-form__legend--fio fieldset__legend">ФИО</legend>
-              <ul class="order-form__person-list site-form__field-list fieldset-item">
+              <ul class="order-form__person-list site-form__field-list fieldset-item fieldset-item--text">
                 <li class="site-form__text-field site-form__text-field--name site-form__label-text">
                   <label class="site-form__label site-form__label-text" for="name-id">Имя:</label>
                   <input class="site-form__text-input" type="text" name="name" id="name-id"
@@ -217,7 +217,7 @@
                   <label class="site-form__label site-form__label-text" for="middle-name-id">Отчество:</label>
                   <!-- site-form__text-input--middle-name -->
                   <input class="site-form__text-input" type="text" name="middle-name" id="middle-name-id"
-                    placeholder="Отчество, если сами пожелаете">
+                    placeholder="Отчество, если желаете">
                 </li>
               </ul>
             </fieldset>
@@ -230,7 +230,7 @@
               <legend class="site-form__legend site-form__legend--tel fieldset__legend">Тел</legend>
               <!--   <div class="form-text-input"> -->
               <label class="visually-hidden" for="phone-id">Введите номер телефона</label>
-              <input class="site-form__text-input fieldset-item site-form__text-input--tel" type="tel" name="phone"
+              <input class="site-form__text-input fieldset-item fieldset-item--text site-form__text-input--tel" type="tel" name="phone"
                 id="phone-id" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
               <!-- </div> -->
             </fieldset>
@@ -238,7 +238,7 @@
               <legend class="site-form__legend site-form__legend--mail fieldset__legend">E-mail</legend>
               <!--    <div class="form-text-input"> -->
               <label class="visually-hidden" for="email-id">Введите адрес электронной почты</label>
-              <input class="site-form__text-input fieldset-item site-form__text-input--email" type="email" name="email"
+              <input class="site-form__text-input fieldset-item fieldset-item--text site-form__text-input--email" type="email" name="email"
                 id="email-id" placeholder="Ваш Email*" required>
               <!--      </div> -->
             </fieldset>
@@ -251,7 +251,7 @@
               <legend class="site-form__legend site-form__legend--add fieldset__legend">Доп</legend>
               <!--  <div class="form-textarea-input"> -->
               <label class="visually-hidden" for="text-id">Дополнительная информация</label>
-              <textarea class="order-form__textarea-input site-form__textarea-input fieldset-item" name="text"
+              <textarea class="order-form__textarea-input site-form__textarea-input fieldset-item fieldset-item--text" name="text"
                 id="text-id" cols="25" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               <!--    </div> -->
             </fieldset>

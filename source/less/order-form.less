@@ -43,6 +43,10 @@
     row-gap: 24px;
     padding: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    row-gap: 26px;
+  }
 }
 
 .order-form__checkbox-list {
@@ -73,14 +77,26 @@
     row-gap: 24px;
     padding: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 3px;
+  }
 }
 
 .order-form__email-fieldset {
   margin-top: 35px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 25px;
+  }
 }
 
 .order-form__textarea-input {
   margin-top: 22px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .order-form__footer-text {
@@ -115,7 +131,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(6, 1fr);
-    padding-top: 49px;
+    padding-top: 45px;
   }
 }
 
