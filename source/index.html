@@ -128,6 +128,11 @@
           </dl>
           <div class="promo__product-image-wrapper">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)"
+                srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile-1.webp 1x img/triple-set-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)"
                 srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
@@ -299,33 +304,41 @@
       </div>
     </div>
   </footer>
-  <section class="page-content__modal modal">
-    <h2 class="visually-hidden">Форма заказа товара</h2>
-    <div class="modal__content-wrapper">
-      <p class="modal__title">Добавить <br> в корзину</p>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <p class="modal__legend">Выберите размер:</p>
-        <ul class="modal__size-list">
-          <li class="modal__size-item">
-            <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size1-id"
-              value="S" checked>
-            <label class="modal__size-label" for="product-size1-id">S</label>
-          </li>
-          <li class="modal__size-item">
-            <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size2-id"
-              value="M">
-            <label class="modal__size-label" for="product-size2-id">M</label>
-          </li>
-          <li class="modal__size-item">
-            <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size3-id"
-              value="L">
-            <label class="modal__size-label" for="product-size3-id">L</label>
-          </li>
-        </ul>
-        <button class="button button--modal modal__button">Добавить</button>
-      </form>
+  <section class="page-content__modal">
+    <div class="modal">
+      <h2 class="visually-hidden">Форма заказа товара</h2>
+      <div class="modal__content-wrapper">
+        <p class="modal__title">Добавить <br> в корзину</p>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <p class="modal__legend">Выберите размер:</p>
+          <ul class="modal__size-list">
+            <li class="modal__size-item">
+              <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size1-id"
+                value="S" checked>
+              <label class="modal__size-label" for="product-size1-id">S</label>
+            </li>
+            <li class="modal__size-item">
+              <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size2-id"
+                value="M">
+              <label class="modal__size-label" for="product-size2-id">M</label>
+            </li>
+            <li class="modal__size-item">
+              <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size3-id"
+                value="L">
+              <label class="modal__size-label" for="product-size3-id">L</label>
+            </li>
+          </ul>
+          <button class="button button--modal modal__button">Добавить</button>
+        </form>
+      </div>
+      <button class="modal__close-button" type="button"><span class="visually-hidden">Закрыть окно</span>
+        <svg class="modal__close-button-icon" width="21" height="20">
+          <use xlink:href="img/menu-sprite.svg#menu-close"></use>
+        </svg>
+      </button>
     </div>
   </section>
+  <script src="js/modal.js"></script>
   <script src="js/map.js"></script>
   <script src="js/nav.js"></script>
   <script async defer

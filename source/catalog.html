@@ -32,7 +32,6 @@
           <use xlink:href="img/menu-sprite.svg#menu-close"></use>
         </svg>
       </button>
-      <!-- page-nav__site-list--open -->
       <ul class="page-nav__site-list  site-nav">
         <li class="site-nav__item">
           <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
@@ -47,7 +46,6 @@
           <a class="site-nav__link" href="#">Распродажа</a>
         </li>
       </ul>
-      <!-- page-nav__user-list--open  -->
       <ul class="page-nav__user-list user-nav">
         <li class="user-nav__item user-nav__item--search">
           <a class="user-nav__link" href="#">
@@ -70,7 +68,7 @@
     </nav>
   </header>
   <main class="page-body__content page-content">
-    <div class="page-content__title content-header content-header--decorated">
+    <div class="page-content__title content-header content-header--decorated-inner">
       <div class="content-header__wrapper">
         <h1 class="content-header__title section-title section-title--main">Каталог товаров</h1>
       </div>
@@ -82,6 +80,11 @@
           <li class="production-list__item production-item">
             <a class="production-item__card-link production-item__img-wrapper" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1150px)"
+                  srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/pr-mobile-1.webp 1x img/pr-mobile-1@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
                 <img class="production-item__img" src="img/pr-mobile-1.jpg" srcset="img/pr-mobile-1@2x.jpg 2x"
@@ -96,10 +99,8 @@
               <div class="production-item__order">
                 <p class="production-item__price text">1 200 руб.</p>
                 <button class="production-item__add-cart" type="button"><span class="visually-hidden">Заказать</span>
-                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.2"
-                      d="M19.2271 7.23811H15.8454L12.5604 0.402108C12.3672 -9.09136e-06 11.9807 -0.100526 11.5942 0.100532C11.2077 0.301591 11.1111 0.703707 11.3043 1.10582L14.2995 7.23811H5.50723L8.50241 1.10582C8.69565 0.703707 8.50242 0.301591 8.21257 0.100532C7.82609 -0.100526 7.43962 0.10052 7.24638 0.402108L3.96133 7.23811H0.772936C0.386462 7.23811 0 7.53968 0 8.04233C0 8.44445 0.289844 8.84655 0.772936 8.84655H0.966184L1.83574 11.8624C1.64251 11.963 1.54587 12.164 1.54587 12.4656C1.54587 12.8677 1.83574 13.1693 2.22221 13.1693L3.86474 19H16.1353L17.7778 13.1693C18.1643 13.1693 18.4541 12.8677 18.4541 12.4656C18.4541 12.2645 18.3575 11.963 18.1643 11.8624L19.0338 8.84655H19.2271C19.6135 8.84655 20 8.54498 20 8.04233C20 7.53968 19.6135 7.23811 19.2271 7.23811ZM14.8792 17.3915H4.83092L3.67149 13.0688H16.1353L14.8792 17.3915ZM16.4251 11.5609H3.1884L2.41546 8.74605H17.1981L16.4251 11.5609Z"
-                      fill="black" />
+                  <svg class="production-item__add-cart-icon" width="20" height="19">
+                    <use xlink:href="img/icon-sprite.svg#cart-ico"></use>
                   </svg>
                 </button>
               </div>
@@ -108,6 +109,11 @@
           <li class="production-list__item production-item">
             <a class="production-item__card-link production-item__img-wrapper" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1150px)"
+                  srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/pr-mobile-2.webp 1x img/pr-mobile-2@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x ">
                 <img class="production-item__img" src="img/pr-mobile-2.jpg" srcset="img/pr-mobile-2@2x.jpg 2x"
@@ -123,10 +129,8 @@
               <div class="production-item__order">
                 <p class="production-item__price">690 руб.</p>
                 <button class="production-item__add-cart" type="button"><span class="visually-hidden">Заказать</span>
-                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.2"
-                      d="M19.2271 7.23811H15.8454L12.5604 0.402108C12.3672 -9.09136e-06 11.9807 -0.100526 11.5942 0.100532C11.2077 0.301591 11.1111 0.703707 11.3043 1.10582L14.2995 7.23811H5.50723L8.50241 1.10582C8.69565 0.703707 8.50242 0.301591 8.21257 0.100532C7.82609 -0.100526 7.43962 0.10052 7.24638 0.402108L3.96133 7.23811H0.772936C0.386462 7.23811 0 7.53968 0 8.04233C0 8.44445 0.289844 8.84655 0.772936 8.84655H0.966184L1.83574 11.8624C1.64251 11.963 1.54587 12.164 1.54587 12.4656C1.54587 12.8677 1.83574 13.1693 2.22221 13.1693L3.86474 19H16.1353L17.7778 13.1693C18.1643 13.1693 18.4541 12.8677 18.4541 12.4656C18.4541 12.2645 18.3575 11.963 18.1643 11.8624L19.0338 8.84655H19.2271C19.6135 8.84655 20 8.54498 20 8.04233C20 7.53968 19.6135 7.23811 19.2271 7.23811ZM14.8792 17.3915H4.83092L3.67149 13.0688H16.1353L14.8792 17.3915ZM16.4251 11.5609H3.1884L2.41546 8.74605H17.1981L16.4251 11.5609Z"
-                      fill="black" />
+                  <svg class="production-item__add-cart-icon" width="20" height="19">
+                    <use xlink:href="img/icon-sprite.svg#cart-ico"></use>
                   </svg>
                 </button>
               </div>
@@ -135,24 +139,28 @@
           <li class="production-list__item production-item">
             <a class="production-item__card-link production-item__img-wrapper" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1150px)"
+                  srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/pr-mobile-3.webp 1x img/pr-mobile-3@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
-                <img class="production-item__img" src="img/pr-mobile-3.jpg" srcset="img/pr-mobile-1@2x.jpg 2x"
+                <img class="production-item__img" src="img/pr-mobile-3.jpg" srcset="img/pr-mobile-3@2x.jpg 2x"
                   alt="Большая корзинка для игрушек. Вместительная и удобная" width="260" height="195">
               </picture>
             </a>
             <div class="production-item__content-wrapper">
               <a class="production-item__card-link production-item__card-link--title" href="#">
-                <h3 class="production-item__title section-title section-title--h3">Большая корзинка для игрушек</h3>
+                <h3 class="production-item__title section-title section-title--h3">Большая корзинка <br> для игрушек
+                </h3>
               </a>
               <p class="production-item__desc text">Диаметр 30 см, высота 30 см</p>
               <div class="production-item__order">
                 <p class="production-item__price">1 500 руб.</p>
                 <button class="production-item__add-cart" type="button"><span class="visually-hidden">Заказать</span>
-                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.2"
-                      d="M19.2271 7.23811H15.8454L12.5604 0.402108C12.3672 -9.09136e-06 11.9807 -0.100526 11.5942 0.100532C11.2077 0.301591 11.1111 0.703707 11.3043 1.10582L14.2995 7.23811H5.50723L8.50241 1.10582C8.69565 0.703707 8.50242 0.301591 8.21257 0.100532C7.82609 -0.100526 7.43962 0.10052 7.24638 0.402108L3.96133 7.23811H0.772936C0.386462 7.23811 0 7.53968 0 8.04233C0 8.44445 0.289844 8.84655 0.772936 8.84655H0.966184L1.83574 11.8624C1.64251 11.963 1.54587 12.164 1.54587 12.4656C1.54587 12.8677 1.83574 13.1693 2.22221 13.1693L3.86474 19H16.1353L17.7778 13.1693C18.1643 13.1693 18.4541 12.8677 18.4541 12.4656C18.4541 12.2645 18.3575 11.963 18.1643 11.8624L19.0338 8.84655H19.2271C19.6135 8.84655 20 8.54498 20 8.04233C20 7.53968 19.6135 7.23811 19.2271 7.23811ZM14.8792 17.3915H4.83092L3.67149 13.0688H16.1353L14.8792 17.3915ZM16.4251 11.5609H3.1884L2.41546 8.74605H17.1981L16.4251 11.5609Z"
-                      fill="black" />
+                  <svg class="production-item__add-cart-icon" width="20" height="19">
+                    <use xlink:href="img/icon-sprite.svg#cart-ico"></use>
                   </svg>
                 </button>
               </div>
@@ -190,7 +198,6 @@
           <div class="production-promo__button-wrapper">
             <a class="production-promo__order-button button" href="form.html">Сделать заказ</a>
           </div>
-          <!--  <div class="production-promo__decor"></div> -->
         </div>
       </div>
     </section>
@@ -246,34 +253,42 @@
       </div>
     </div>
   </footer>
-  <section class="page-content__modal modal">
-    <h2 class="visually-hidden">Форма заказа товара</h2>
-    <div class="modal__content-wrapper">
-      <p class="modal__title">Добавить <br> в корзину</p>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <p class="modal__legend">Выберите размер:</p>
-        <ul class="modal__size-list">
-          <li class="modal__size-item">
-            <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size1-id"
-              value="S" checked>
-            <label class="modal__size-label" for="product-size1-id">S</label>
-          </li>
-          <li class="modal__size-item">
-            <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size2-id"
-              value="M">
-            <label class="modal__size-label" for="product-size2-id">M</label>
-          </li>
-          <li class="modal__size-item">
-            <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size3-id"
-              value="L">
-            <label class="modal__size-label" for="product-size3-id">L</label>
-          </li>
-        </ul>
-        <button class="button button--modal modal__button">Добавить</button>
-      </form>
+  <section class="page-content__modal">
+    <div class="modal">
+      <h2 class="visually-hidden">Форма заказа товара</h2>
+      <div class="modal__content-wrapper">
+        <p class="modal__title">Добавить <br> в корзину</p>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <p class="modal__legend">Выберите размер:</p>
+          <ul class="modal__size-list">
+            <li class="modal__size-item">
+              <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size1-id"
+                value="S" checked>
+              <label class="modal__size-label" for="product-size1-id">S</label>
+            </li>
+            <li class="modal__size-item">
+              <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size2-id"
+                value="M">
+              <label class="modal__size-label" for="product-size2-id">M</label>
+            </li>
+            <li class="modal__size-item">
+              <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size3-id"
+                value="L">
+              <label class="modal__size-label" for="product-size3-id">L</label>
+            </li>
+          </ul>
+          <button class="button button--modal modal__button">Добавить</button>
+        </form>
+      </div>
+      <button class="modal__close-button" type="button"><span class="visually-hidden">Закрыть окно</span>
+        <svg class="modal__close-button-icon" width="21" height="20">
+          <use xlink:href="img/menu-sprite.svg#menu-close"></use>
+        </svg>
+      </button>
     </div>
   </section>
   <script src="js/nav.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>
