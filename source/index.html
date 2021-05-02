@@ -6,7 +6,7 @@
   <title>HTML Academy: Мишка</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/favicon32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
@@ -31,7 +31,6 @@
           <use xlink:href="img/menu-sprite.svg#menu-close"></use>
         </svg>
       </button>
-      <!-- page-nav__site-list--open -->
       <ul class="page-nav__site-list  site-nav">
         <li class="site-nav__item">
           <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
@@ -46,7 +45,6 @@
           <a class="site-nav__link" href="#">Распродажа</a>
         </li>
       </ul>
-      <!-- page-nav__user-list--open  -->
       <ul class="page-nav__user-list user-nav">
         <li class="user-nav__item user-nav__item--search">
           <a class="user-nav__link" href="#">
@@ -67,7 +65,6 @@
       </ul>
       <p class="page-nav__feature-text">Бесплатная доставка по России</p>
     </nav>
-    <!--     </div> -->
   </header>
   <main class="page-body__content page-content">
     <section class="start start--decorated">
@@ -129,10 +126,11 @@
           <div class="promo__product-image-wrapper">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)"
-                srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
+                srcset="img/webp/triple-set-desktop.webp 1x, img/webp/triple-set-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/triple-set-mobile-1.webp 1x img/triple-set-mobile@2x.webp 2x">
+                srcset="img/webp/triple-set-tablet.webp 1x, img/webp/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/webp/triple-set-mobile-1.webp 1x img/webp/triple-set-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)"
                 srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
@@ -173,10 +171,8 @@
                     количества лайков, как у популярных инстамамочек. <br> В отчаянии, я накупила аксессуаров и игрушек
                     в
                     Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-                  <!-- <div class="review__author-wrapper"> -->
                   <cite class="review__author">Анастасия Красильникова</cite>
                   <address class="review__author-contact">@misssssiskras</address>
-                  <!--    </div> -->
                 </blockquote>
               </li>
               <li class="review__item slider__item">
@@ -185,10 +181,8 @@
                     количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
                     и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
                     больше лайков!</p>
-                  <!-- <div class="review__author-wrapper"> -->
                   <cite class="review__author">Екатерина Красильникова</cite>
                   <address class="review__author-contact">misssssiskras2</address>
-                  <!--      </div> -->
                 </blockquote>
               </li>
               <li class="review__item slider__item">
@@ -198,10 +192,8 @@
                     игрушек
                     в Мишке, и мои фотографии
                     сразу стали более стильными, а также набирают больше лайков!</p>
-                  <!--  <div class="review__author-wrapper"> -->
                   <cite class="review__author">Елена Красильникова</cite>
                   <address class="review__author-contact">@misssssiskras3</address>
-                  <!--   </div> -->
                 </blockquote>
               </li>
             </ul>
@@ -239,9 +231,13 @@
           </li>
         </ul>
       </div>
-      <!--  пока просто картинка -->
       <div class="contact__map-wrapper" id="map">
         <picture>
+          <source type="image/webp" media="(min-width: 1150px)"
+            srcset="img/webp/map-desktop-v2.png 1x, img/webp/map-desktop-v2.png@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/webp/map-tablet-v2.webp 1x, img/webp/map-desktop-v2@2x.webp 2x">
+          <source type="image/webp" srcset="img/webp/map-mobile-v2.webp 1x img/webp/map-mobile-v2@2x.webp 2x">
           <source media="(min-width: 1150px)" srcset="img/map-desktop-v2.png 1x, img/map-desktop-v2@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/map-tablet-v2.png 1x, img/map-tablet-v2@2x.png 2x">
           <img class="contact__map" src="img/map-mobile-v2.png" srcset="img/map-mobile-v2@2x.png 2x"
@@ -338,9 +334,9 @@
       </button>
     </div>
   </section>
-  <script src="js/modal.js"></script>
-  <script src="js/map.js"></script>
-  <script src="js/nav.js"></script>
+  <script src="js/modal.min.js"></script>
+  <script src="js/map.min.js"></script>
+  <script src="js/nav.min.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDttqdubiQCKsGcu24-MBDSG9N-aFzxKJE&callback=initMap"></script>
 </body>
