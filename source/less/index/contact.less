@@ -8,15 +8,17 @@
 
 .contact__wrapper {
   @media (max-width: @mobile-only-width) {
-    min-width: 260px;
-    padding: 0 30px;
-    margin: 0 auto;
+    /* min-width: 260px;
+  padding: 0 30px;
+  margin: 0 auto; */
+    .mobile-wrapper();
   }
 
   @media (min-width: @tablet-width) {
-    min-width: 668px;
+    /* min-width: 668px;
     width: 86%;
-    padding: 0 50px;
+    padding: 0 50px; */
+    .tablet-wrapper();
   }
 
   @media (min-width: @desktop-width) {
@@ -35,7 +37,8 @@
   padding-bottom: 28px;
 
   @media (max-width: @mobile-only-width) {
-    font-size: 18px;
+    /* font-size: 18px; */
+    .font-size(18px, 30px);
   }
 
   @media (min-width: @tablet-width) {
@@ -94,15 +97,15 @@
 }
 
 .contact__item {
-  //!!! переделать раскладку
   margin-bottom: 30px;
   display: grid;
   grid-template-columns: 76px 1fr;
 }
 
 .contact__kind {
-  font-size: 14px;
-  line-height: 30px;
+  /* font-size: 14px;
+  line-height: 30px; */
+  .font-size(14px, 30px);
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
@@ -110,8 +113,9 @@
 }
 
 .contact__value {
-  font-size: 14px;
-  line-height: 30px;
+  /* font-size: 14px;
+  line-height: 30px; */
+  .font-size(14px, 30px);
   color: @text-color;
   font-style: normal;
   text-decoration: none;
@@ -147,38 +151,16 @@
   position: relative;
   min-height: 454px;
 
-  /* &::before {
-    position: absolute;
-    content: "";
-    width: 67px;
-    height: 100px;
-    top: 32%;
-    left: 43%;
-    background-image: url("../img/map-pin.svg");
-    background-repeat: no-repeat;
-    z-index: 999;
-  } */
 
   @media (min-width: @tablet-width) {
     min-height: 457px;
-    /* &::before {
-      top: 32%;
-      left: 47%;
-    } */
   }
 
   @media (min-width: @desktop-width) {
-    /* width: 527px;
-    height: 457px; */
     grid-column-start: 4;
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 3;
-
-    /* &::before {
-      top: 146px;
-      left: 239px;
-    } */
   }
 }
 
@@ -221,13 +203,4 @@
   @media (min-width: @desktop-width) {
     margin: 0;
   }
-
-  /* @media (min-width: @desktop-width) {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    margin: 0;
-    margin-top: 55px;
-  } */
 }

@@ -3,12 +3,12 @@
   position: relative;
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
-    background-image: url("../img/review-tablet.png");
+    background-image: url("../img/background-img/review-tablet.png");
     background-repeat: no-repeat;
     background-position: top left;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/review-tablet@2x.png");
+      background-image: url("../img/background-img/review-tablet@2x.png");
       background-size: 350px 457px;
     }
   }
@@ -41,20 +41,23 @@
 }
 
 .review__wrapper {
-  min-width: 260px;
+  /* min-width: 260px;
   padding: 0 30px;
-  margin: 0 auto;
+  margin: 0 auto; */
+  .mobile-wrapper();
 
   @media (min-width: @tablet-width) {
-    min-width: 668px;
+    /* min-width: 668px;
     width: 86%;
-    padding: 0 50px;
+    padding: 0 50px; */
+    .tablet-wrapper();
   }
 
   @media (min-width: @desktop-width) {
-    width: 1050px;
+    /* width: 1050px;
     padding: 0 50px;
-    margin: 0 auto;
+    margin: 0 auto; */
+    .desktop-wrapper();
   }
 }
 
@@ -71,12 +74,12 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     padding-bottom: 90px;
-    background-image: url("../img/review-tablet.png");
+    background-image: url("../img/background-img/review-tablet.png");
     background-repeat: no-repeat;
     background-position: top left;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/review-tablet@2x.png");
+      background-image: url("../img/background-img/review-tablet@2x.png");
       background-size: 350px 457px;
     }
 
@@ -150,15 +153,17 @@
 
 .review__text {
   margin: 0;
-  font-size: 15px;
-  line-height: 30px;
+  /* font-size: 15px;
+  line-height: 30px; */
   padding-bottom: 30px;
+  .font-size(15px, 30px);
 
 
   @media (min-width: @tablet-width) {
     padding-bottom: 61px;
-    font-size: 17px;
-    line-height: 30px;
+    /* font-size: 17px;
+    line-height: 30px; */
+    .font-size(17px, 30px);
 
     & br {
       display: none;
@@ -175,11 +180,13 @@
 .review__author {
   font-style: normal;
   font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
+  /* font-size: 17px;
+  line-height: 24px; */
+  .font-size(17px, 24px);
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
-    font-size: 18px;
+    /* font-size: 18px; */
+    .font-size(18px, 24px);
   }
 }
 

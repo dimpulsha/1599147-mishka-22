@@ -21,8 +21,9 @@
 .site-nav__item {
   box-sizing: border-box;
   font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
+  /* font-size: 17px;
+  line-height: 24px; */
+  .font-size(17px, 24px);
   color: @menu-text-color;
 
   @media (max-width: @mobile-only-width) {
@@ -36,7 +37,8 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 35px;
-    font-size: 15px;
+    /* font-size: 15px; */
+    .font-size(15px, 24px);
 
     & .site-nav__link {
       padding-top: 22px;
@@ -44,9 +46,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 17px;
+    /*  font-size: 17px; */
     margin-right: 0;
     height: 88px;
+    .font-size(17px, 24px);
 
     & .site-nav__link {
       padding-top: 33px;
@@ -68,7 +71,8 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    font-size: 15px;
+    /* font-size: 15px; */
+    .font-size(15px, 24px);
 
     & .site-nav__link {
       padding-top: 20px;

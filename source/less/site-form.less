@@ -13,8 +13,9 @@
 
 .site-form__legend {
   font-weight: bold;
-  font-size: 17px;
-  line-height: 16px;
+  /* font-size: 17px;
+  line-height: 16px; */
+  .font-size(17px, 16px);
   text-transform: uppercase;
   color: @legend-color;
 }
@@ -123,12 +124,14 @@
 
 .site-form__label {
   font-weight: bold;
-  font-size: 17px;
-  line-height: 18px;
+  /* font-size: 17px;
+  line-height: 18px; */
+  .font-size(17px, 18px);
   color: @menu-text-color;
 
   @media (min-width: @tablet-width) {
-    font-size: 19px;
+    /* font-size: 19px; */
+    .font-size(19px, 18px);
   }
 }
 
@@ -262,10 +265,9 @@
   min-height: 48px;
   width: 100%;
   padding: 0;
-  //padding-left: 18px;  для планшетов и выше
-  //шрифт разный для планшета
-  font-size: 17px;
-  line-height: 18px;
+  /* font-size: 17px;
+  line-height: 18px; */
+  .font-size(17px, 18px);
   color: @menu-text-color;
   border: none;
   border-bottom: 2px solid @checkbox-color;
@@ -273,9 +275,10 @@
   outline: none;
 
   @media (min-width: @tablet-width) {
-    font-size: 19px;
+    /* font-size: 19px; */
     padding-left: 17px;
     min-height: 52px;
+    .font-size(19px, 18px);
   }
 
   &::placeholder {
@@ -320,14 +323,16 @@
   box-sizing: border-box;
   width: 100%;
   padding: 17px;
-  font-size: 17px;
-  line-height: 18px;
+  /* font-size: 17px;
+  line-height: 18px; */
+  .font-size(17px, 18px);
   color: @menu-text-color;
   border: 2px solid @checkbox-color;
   background-color: transparent;
 
   @media (min-width: @tablet-width) {
-    font-size: 19px;
+    /* font-size: 19px; */
+    .font-size(19px, 18px);
   }
 
   &::placeholder {
@@ -353,11 +358,13 @@
 }
 
 .site-form__text {
-  font-size: 14px;
-  line-height: 16px;
+  /* font-size: 14px;
+  line-height: 16px; */
+  .font-size(14px, 16px);
 
   @media (min-width: @tablet-width) {
-    font-size: 17px;
-    line-height: 30px;
+    /* font-size: 17px;
+    line-height: 30px; */
+    .font-size(17px, 30px);
   }
 }
