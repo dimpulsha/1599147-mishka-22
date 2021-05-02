@@ -5,6 +5,25 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const del = require("del");
+const htmlmin = require("gulp-htmlmin")
+
+//Clean
+const clean = () => {
+  return del("build");
+}
+
+exports.clean = clean;
+
+//HTML
+
+const htmlMin = () => {
+  return gulp.src("source/**/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true, collapseInlineTagWhitespace: true }))
+    .pipe(gulp.dest("build"));
+}
+
+exports.htmlMin = htmlMin;
 
 // Styles
 
@@ -46,6 +65,19 @@ const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
+
+//build
+const buildProject = (done) => {
+  gulp.series(
+    clean,
+    gulp.parallel(
+      htmlMin
+    ),
+  )
+  done ();
+};
+
+exports.buildProject = buildProject;
 
 exports.default = gulp.series(
   styles, server, watcher
