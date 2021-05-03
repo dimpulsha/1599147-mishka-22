@@ -26,6 +26,7 @@ exports.clean = clean;
 const copy = (done) => {
   gulp.src(["source/*.ico",
     "source/fonts/*.{woff,woff2}",
+    "source/manifest.webmanifest",
     //"source/img/*.svg",
     //"source/img/background-img/*",
     //"!source/img/icon-sprite.src",
