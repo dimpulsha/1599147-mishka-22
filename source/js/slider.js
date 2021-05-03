@@ -22,5 +22,3 @@ backButton.addEventListener("click", function (evt) {
   }
   sliderList[countSlide].classList.add("slider__item--current");
 });
-
-
