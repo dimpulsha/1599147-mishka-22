@@ -21,7 +21,7 @@
 
 .user-nav__item {
   box-sizing: border-box;
-  //мобильный декор
+
   @media (max-width: @mobile-only-width) {
     box-shadow: 0 1px 0 @menu-border, inset 0 1px 0 @menu-border;
     height: 79px;
@@ -43,8 +43,9 @@
   width: 100%;
   height: 100%;
   font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
+  /* font-size: 17px;
+  line-height: 24px; */
+  .font-size(17px, 24px);
   color: @menu-text-color;
   text-decoration: none;
 
@@ -53,6 +54,10 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding: 33px 0 31px 80px;
+  }
+
+  @media (min-width: @desktop-width) {
     padding: 33px 3px 31px 80px;
   }
 

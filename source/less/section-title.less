@@ -1,41 +1,41 @@
 //
-.title-size (@font-size: 25px,
+/* .title-size (@font-size: 25px,
   @line-height: 30px) {
   font-size: @font-size;
   line-height: @line-height;
-}
+} */
 
 .section-title {
   margin: 0;
   font-weight: bold;
-  .title-size ();
+  .font-size (25px, 30px);
   color: @menu-text-color;
 
   @media (min-width: @tablet-width) {
-    .title-size (43px, 50px);
+    .font-size (43px, 50px);
   }
 
   @media (min-width: @desktop-width) {
-    .title-size (53px, 57px);
+    .font-size (53px, 57px);
   }
 }
 
 .section-title--main {
-  .title-size (27px, 30px);
+  .font-size (27px, 30px);
 
   @media (min-width: @tablet-width) {
-    .title-size (43px, 50px);
+    .font-size (43px, 50px);
   }
 
   @media (min-width: @desktop-width) {
-    .title-size (53px, 57px);
+    .font-size (53px, 57px);
   }
 }
 
 .section-title--h3 {
-  .title-size (17px, 24px);
+  .font-size (17px, 24px);
 
   @media (min-width: @tablet-width) {
-    .title-size (20px, 24px);
+    .font-size (20px, 24px);
   }
 }

@@ -28,21 +28,24 @@
 
 .promo__wrapper {
   position: relative;
-  min-width: 260px;
+  /* min-width: 260px;
   padding: 0 30px;
-  margin: 0 auto;
+  margin: 0 auto; */
+  .mobile-wrapper();
 
   @media (min-width: @tablet-width) {
-    min-width: 668px;
+    /* min-width: 668px;
     width: 86%;
     padding: 0 50px;
-    margin: 0 auto;
+    margin: 0 auto; */
+    .tablet-wrapper();
   }
 
   @media (min-width: @desktop-width) {
-    width: 1050px;
+    /* width: 1050px;
     padding: 0 50px;
-    margin: 0 auto;
+    margin: 0 auto; */
+    .desktop-wrapper();
   }
 }
 
@@ -74,6 +77,7 @@
 
 .promo__title {
   padding-bottom: 4px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     grid-column: span 3;
@@ -89,15 +93,16 @@
     grid-row-start: 1;
     grid-row-end: 2;
     padding-top: 61px;
-    padding-bottom: 25px;
+    padding-bottom: 27px;
   }
 }
 
 .promo__subtitle {
   margin: 0;
   font-weight: bold;
-  font-size: 17px;
-  line-height: 20px;
+  /* font-size: 17px;
+  line-height: 20px; */
+  .font-size(17px, 20px);
   text-transform: uppercase;
   color: @accented-text;
 
@@ -110,7 +115,7 @@
     grid-column-end: 5;
     text-align: center;
     padding-top: 6px;
-    padding-left: 35px;
+    padding-left: 37px;
 
     & br {
       display: initial;
@@ -131,8 +136,9 @@
 .promo__text {
   margin-top: 17px;
   margin-bottom: 0;
-  font-size: 15px;
-  line-height: 24px;
+  /* font-size: 15px;
+  line-height: 24px; */
+  .font-size(15px, 24px);
 
   & br {
     display: none;
@@ -145,8 +151,9 @@
     grid-row-end: 3;
     margin: 0;
     margin-right: 42px;
-    font-size: 17px;
-    line-height: 30px;
+    /* font-size: 17px;
+    line-height: 30px; */
+    .font-size(17px, 30px);
 
     & br {
       display: none;
@@ -208,21 +215,21 @@
     grid-row-start: 1;
     grid-row-end: 6;
     margin-top: 0;
-    z-index: -1;
+    //z-index: -1;
   }
 }
 
 .promo__image {
   width: 100%;
   height: auto;
-  //сделать обёртку для рисунка и переместить позиционирование туда
 }
 
 .promo__price-value {
   margin: 16px 0 23px;
+  .font-size(17px, 24px);
   font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
+  /* font-size: 17px;
+  line-height: 24px; */
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -231,9 +238,10 @@
     grid-row-start: 4;
     grid-row-end: 5;
     text-align: left;
-    margin-top: 18px;
+    margin-top: 16px;
     padding-left: 73px;
-    font-size: 20px;
+    /* font-size: 20px; */
+    .font-size(20px, 24px);
   }
 
   @media (min-width: @desktop-width) {
