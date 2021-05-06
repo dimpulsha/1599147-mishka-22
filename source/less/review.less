@@ -15,15 +15,17 @@
 }
 
 .review--decorated {
-  &::after {
-    position: absolute;
-    content: " ";
-    width: 100%;
-    height: 6px;
-    left: 0;
-    bottom: 0;
-    background-image: url("../img/zigzag-line-mobile.svg");
-    background-repeat: repeat-x;
+  @media (max-width: @mobile-only-width) {
+    &::after {
+      position: absolute;
+      content: " ";
+      width: 100%;
+      height: 6px;
+      left: 0;
+      bottom: 0;
+      background-image: url("../img/zigzag-line-mobile.svg");
+      background-repeat: repeat-x;
+    }
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
