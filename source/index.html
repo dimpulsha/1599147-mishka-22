@@ -130,13 +130,13 @@
               <source type="image/webp" media="(min-width: 768px)"
                 srcset="img/webp/triple-set-tablet.webp 1x, img/webp/triple-set-tablet@2x.webp 2x">
               <source type="image/webp"
-                srcset="img/webp/triple-set-mobile-1.webp 1x img/webp/triple-set-mobile@2x.webp 2x">
+                srcset="img/webp/triple-set-mobile-1.webp 1x, img/webp/triple-set-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)"
                 srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
                 srcset="img/triple-set-tablet.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <img class="promo__image" src="img/triple-set-mobile-1.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
-                alt="Вязаные корзинки трех размеров. Цвет «Тиффани»/серый и розовый/белый">
+                alt="Вязаные корзинки трех размеров. Цвет «Тиффани»/серый и розовый/белый" loading="lazy">
             </picture>
           </div>
           <p class="promo__price-value">Цена: 990 руб.</p>
@@ -237,11 +237,11 @@
             srcset="img/webp/map-desktop-v2.webp 1x, img/webp/map-desktop-v2@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)"
             srcset="img/webp/map-tablet-v2.webp 1x, img/webp/map-tablet-v2@2x.webp 2x">
-          <source type="image/webp" srcset="img/webp/map-mobile-v2.webp 1x img/webp/map-mobile-v2@2x.webp 2x">
+          <source type="image/webp" srcset="img/webp/map-mobile-v2.webp 1x, img/webp/map-mobile-v2@2x.webp 2x">
           <source media="(min-width: 1150px)" srcset="img/map-desktop-v2.png 1x, img/map-desktop-v2@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/map-tablet-v2.png 1x, img/map-tablet-v2@2x.png 2x">
           <img class="contact__map" src="img/map-mobile-v2.png" srcset="img/map-mobile-v2@2x.png 2x"
-            alt="Карта с местом нахождения компании: г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 10">
+            alt="Карта с местом нахождения компании: г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 10" loading="lazy">
         </picture>
       </div>
       <div class="contact__write-button-wrapper">
@@ -334,10 +334,10 @@
       </button>
     </div>
   </section>
-  <script src="js/modal.min.js"></script>
-  <script src="js/map.min.js"></script>
-  <script src="js/nav.min.js"></script>
-  <script src="js/slider.min.js"></script>
+  <script async src="js/modal.min.js"></script>
+  <script async defer src="js/map.min.js"></script>
+  <script async src="js/nav.min.js"></script>
+  <script async src="js/slider.min.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDttqdubiQCKsGcu24-MBDSG9N-aFzxKJE&callback=initMap"></script>
 </body>

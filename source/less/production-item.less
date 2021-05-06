@@ -13,6 +13,10 @@
     flex-direction: column;
   }
 
+  &:focus-within {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
   &:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
@@ -67,6 +71,10 @@
   } */
 
   &--title:hover {
+    opacity: 0.6;
+  }
+
+  &--title:focus {
     opacity: 0.6;
   }
 
@@ -155,6 +163,11 @@
 }
 
 .production-item__add-cart:hover .production-item__add-cart-icon {
+  fill: @card-icon-active;
+  opacity: 1;
+}
+
+.production-item__add-cart:focus .production-item__add-cart-icon {
   fill: @card-icon-active;
   opacity: 1;
 }

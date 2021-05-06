@@ -12,7 +12,7 @@
   grid-row-end: -1;
 
   background-image: url("../img/background-img/video-mobile.jpg");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -59,6 +59,10 @@
 }
 
 .site-video__button:hover .site-video__button-img {
+  transform: scale(1.2);
+}
+
+.site-video__button:focus .site-video__button-img {
   transform: scale(1.2);
 }
 
