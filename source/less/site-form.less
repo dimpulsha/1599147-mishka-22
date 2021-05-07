@@ -181,6 +181,10 @@
   border-color: @checkbox-color-radio-checked;
 }
 
+.site-form__checkbox-input:focus + .site-form__box--checkbox::before {
+  border-color: @checkbox-color-radio-checked;
+}
+
 .site-form__checkbox-input:active + .site-form__box--checkbox::before {
   border-color: fade(@checkbox-color, 30%);
 }
@@ -237,6 +241,10 @@
 }
 
 .site-form__radio-input:hover + .site-form__box--radio-box::before {
+  border-color: @checkbox-color-radio-checked;
+}
+
+.site-form__radio-input:focus + .site-form__box--radio-box::before {
   border-color: @checkbox-color-radio-checked;
 }
 

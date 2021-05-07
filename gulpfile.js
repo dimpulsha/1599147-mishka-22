@@ -102,7 +102,7 @@ exports.jsMin = jsMin;
 
 const optimizeImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([imagemin.mozjpeg({ progressive: true }),
+    .pipe(imagemin([imagemin.mozjpeg({progressive: true}),
     imagemin.optipng({ optimizationLevel: 3 }),
     imagemin.svgo()
     ]))
@@ -255,7 +255,8 @@ exports.build = build;
 exports.default = gulp.series(
   clean,
   copy,
-  copyImages,
+  //copyImages,
+  optimizeImages,
   gulp.parallel(
     htmlMin,
     styles,

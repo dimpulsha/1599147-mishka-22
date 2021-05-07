@@ -16,20 +16,25 @@
   border: 2px solid @main-border-color;
   background-color: transparent;
   cursor: pointer;
+
+  &:hover {
+    color: @button-active-color;
+    background-color: @button-active-bg;
+  }
+
+  &:focus {
+    color: @button-active-color;
+    background-color: @button-active-bg;
+  }
+
+  &:active {
+    background-color: @button-active-bg;
+    color: fade(@button-active-color, 30%);
+  }
 }
 
 .button--w-292 {
   width: 292px;
-}
-
-.button:hover {
-  color: @button-active-color;
-  background-color: @button-active-bg;
-}
-
-.button:active {
-  background-color: @button-active-bg;
-  color: fade(@button-active-color, 30%);
 }
 
 .button--modal {
@@ -42,6 +47,10 @@
   }
 
   &:hover {
+    background-color: @modal-button-active-bg;
+  }
+
+  &:focus {
     background-color: @modal-button-active-bg;
   }
 
