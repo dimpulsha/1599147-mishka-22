@@ -62,7 +62,7 @@
 }
 
 .slider__control {
-  height: 52px; //меняется
+  height: 52px;
   background-color: transparent;
   border: 1px solid @decor-border-color;
   cursor: pointer;
@@ -73,5 +73,9 @@
 
   &:active svg {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
   }
 }
