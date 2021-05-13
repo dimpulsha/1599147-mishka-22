@@ -10,8 +10,8 @@
   grid-column-end: -1;
   grid-row-start: 1;
   grid-row-end: -1;
-
   background-image: url("../img/background-img/video-mobile.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: @video-background;
@@ -30,6 +30,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    background-size: contain;
     background-image: url("../img/background-img/video-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
