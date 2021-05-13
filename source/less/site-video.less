@@ -5,14 +5,13 @@
 
 .site-video__object {
   width: 100%;
-  height: 100%;
+  height: auto;
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 1;
   grid-row-end: -1;
 
   background-image: url("../img/background-img/video-mobile.jpg");
-  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-color: @video-background;
@@ -22,6 +21,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    height: 100%;
     background-image: url("../img/background-img/video-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
